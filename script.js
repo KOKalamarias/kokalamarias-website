@@ -88,28 +88,67 @@ document.addEventListener('DOMContentLoaded', () => {
     revealEls.forEach(el => revealObserver.observe(el));
   }
 
-  // Contact form -> mailto
+  // Contact form -> Web3Forms (direct email delivery)
   const form = document.getElementById('contactForm');
   const formSuccess = document.getElementById('formSuccess');
   if (form) {
-    const RECIPIENT = 'info@kokalamarias.gr';
-    form.addEventListener('submit', (e) => {
+    const WEB3FORMS_KEY = '11db950a-f146-478a-8c56-2e89278fd872';
+    form.addEventListener('submit', async (e) => {
       e.preventDefault();
       const name = document.getElementById('name').value.trim();
       const email = document.getElementById('email').value.trim();
       const subject = document.getElementById('subject').value.trim() || 'Website contact';
       const message = document.getElementById('message').value.trim();
       const isEN = document.documentElement.lang === 'en';
-      const labels = isEN
-        ? { name: 'Name', email: 'Email', subj: 'Subject', msg: 'Message', sig: 'Sent from kokalamarias.gr contact form' }
-        : { name: 'Όνομα', email: 'Email', subj: 'Θέμα', msg: 'Μήνυμα', sig: 'Στάλθηκε από τη φόρμα επικοινωνίας του kokalamarias.gr' };
-      const body =
-        `${labels.name}: ${name}\n${labels.email}: ${email}\n${labels.subj}: ${subject}\n\n${labels.msg}:\n${message}\n\n— ${labels.sig}`;
-      const mailto = `mailto:${RECIPIENT}?subject=${encodeURIComponent('[Website] ' + subject)}&body=${encodeURIComponent(body)}`;
-      window.location.href = mailto;
-      if (formSuccess) {
-        formSuccess.classList.add('show');
-        setTimeout(() => { formSuccess.classList.remove('show'); form.reset(); }, 5000);
+
+      const submitBtn = form.querySelector('button[type="submit"]');
+      const originalBtnText = submitBtn ? submitBtn.textContent : '';
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = isEN ? 'Sending…' : 'Αποστολή…';
+      }
+
+      try {
+        const res = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify({
+            access_key: WEB3FORMS_KEY,
+            subject: '[Website] ' + subject,
+            from_name: 'Κ.Ο. Καλαμαριάς — Φόρμα Επικοινωνίας',
+            name,
+            email,
+            topic: subject,
+            message,
+            botcheck: '',
+          }),
+        });
+        const data = await res.json();
+        if (data.success) {
+          if (formSuccess) {
+            formSuccess.textContent = isEN
+              ? '✓ Your message was sent successfully. We will contact you soon.'
+              : '✓ Το μήνυμά σας στάλθηκε επιτυχώς. Θα επικοινωνήσουμε σύντομα μαζί σας.';
+            formSuccess.classList.add('show');
+          }
+          form.reset();
+          setTimeout(() => { if (formSuccess) formSuccess.classList.remove('show'); }, 8000);
+        } else {
+          throw new Error(data.message || 'Submission failed');
+        }
+      } catch (err) {
+        if (formSuccess) {
+          formSuccess.textContent = isEN
+            ? '✗ Something went wrong. Please email info@kokalamarias.gr directly.'
+            : '✗ Κάτι πήγε στραβά. Στείλτε email απευθείας στο info@kokalamarias.gr.';
+          formSuccess.classList.add('show', 'error');
+          setTimeout(() => { if (formSuccess) formSuccess.classList.remove('show', 'error'); }, 10000);
+        }
+      } finally {
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.textContent = originalBtnText;
+        }
       }
     });
   }
