@@ -4,8 +4,11 @@
 # ======================================================
 
 backend:
-  name: git-gateway
+  name: github
+  repo: KOKalamarias/kokalamarias-website
   branch: main                  # branch όπου γίνεται commit
+  base_url: https://decap-proxy.empty-cloud-336b.workers.dev
+  auth_endpoint: /auth
 
 # Φάκελος για ανέβασμα φωτογραφιών
 media_folder: "images/uploads"
