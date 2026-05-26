@@ -1,0 +1,48 @@
+{
+  "teams": [
+    {
+      "name": "Τμήμα Εκμάθησης",
+      "name_en": "Learn-to-Swim",
+      "age": "4 – 7 ετών",
+      "age_en": "Ages 4 – 7",
+      "description": "Παιγνιώδης εξοικείωση με το νερό. Εξάλειψη υδροφοβίας, εκμάθηση αναπνοής και επίπλευσης.",
+      "description_en": "Playful introduction to water. Overcoming hydrophobia, learning breathing and floating.",
+      "schedule": "Απογευματινές ώρες",
+      "schedule_en": "Afternoon hours",
+      "featured": false
+    },
+    {
+      "name": "Ακαδημία",
+      "name_en": "Academy",
+      "age": "7 – 9 ετών",
+      "age_en": "Ages 7 – 9",
+      "description": "Διδασκαλία των τεσσάρων στιλ (ελεύθερο, ύπτιο, πρόσθιο, πεταλούδα), εκκινήσεις & στροφές.",
+      "description_en": "Teaching the four strokes (freestyle, backstroke, breaststroke, butterfly), starts & turns.",
+      "schedule": "Δευ / Τετ / Παρ",
+      "schedule_en": "Mon / Wed / Fri",
+      "featured": false
+    },
+    {
+      "name": "Προαγωνιστικό",
+      "name_en": "Pre-Competitive",
+      "age": "9 – 12 ετών",
+      "age_en": "Ages 9 – 12",
+      "description": "Αύξηση χιλιομετρικού όγκου, τεχνική υπό κόπωση, εισαγωγή σε ημερίδες ΚΟΕ.",
+      "description_en": "Increased mileage, technique under fatigue, introduction to HSF events.",
+      "schedule": "4 φορές/εβδομάδα",
+      "schedule_en": "4 times per week",
+      "featured": false
+    },
+    {
+      "name": "Αγωνιστικό & Τεχνική",
+      "name_en": "Competitive & Finswimming",
+      "age": "12+ ετών",
+      "age_en": "Ages 12+",
+      "description": "Μετάβαση στην Τεχνική Κολύμβηση: μονοπέδιλο, διπλά πέδιλα, άπνοια. Συμμετοχή σε Πανελλήνια & Διεθνή.",
+      "description_en": "Transition to Finswimming: monofin, bi-fins, apnea. Participation in Hellenic & International events.",
+      "schedule": "Καθημερινά (πρωί & βράδυ)",
+      "schedule_en": "Daily (morning & evening)",
+      "featured": true
+    }
+  ]
+}

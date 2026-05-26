@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Επικοινωνία — Κ.Ο. Καλαμαριάς</title>
+<!-- Open Graph / Social preview -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Κολυμβητικός Όμιλος Καλαμαριάς" />
+  <meta property="og:title" content="Επικοινωνία — Κ.Ο. Καλαμαριάς" />
+  <meta property="og:description" content="Επικοινωνία με τον Κολυμβητικό Όμιλο Καλαμαριάς. Διεύθυνση, τηλέφωνο, email και φόρμα." />
+  <meta property="og:image" content="https://kokalamarias.gr/images/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="el_GR" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Επικοινωνία — Κ.Ο. Καλαμαριάς" />
+  <meta name="twitter:description" content="Επικοινωνία με τον Κολυμβητικό Όμιλο Καλαμαριάς. Διεύθυνση, τηλέφωνο, email και φόρμα." />
+  <meta name="twitter:image" content="https://kokalamarias.gr/images/og-image.jpg" />
+
+  <link rel="icon" type="image/png" href="logo.png" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body data-page="contact">
+
+  <div id="site-nav"></div>
+
+  <section class="page-hero">
+    <div class="container">
+      <span class="page-hero-tag" data-i18n="contact.tag">Επικοινωνία</span>
+      <h1 data-i18n="contact.title">Ελάτε μαζί μας</h1>
+      <p data-i18n="contact.subtitle">Είμαστε στο Δημοτικό Κολυμβητήριο Καλαμαριάς</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div>
+              <strong data-i18n="contact.address_label">Διεύθυνση</strong>
+              <p data-i18n="contact.address_text" data-i18n-html></p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-phone"></i></div>
+            <div>
+              <strong data-i18n="contact.phone_label">Τηλέφωνο</strong>
+              <p><a href="tel:+306986412401">698 641 2401</a></p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+            <div>
+              <strong data-i18n="contact.email_label">Email</strong>
+              <p><a href="mailto:info@kokalamarias.gr">info@kokalamarias.gr</a></p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-globe"></i></div>
+            <div>
+              <strong data-i18n="contact.web_label">Ιστοσελίδα</strong>
+              <p><a href="https://kokalamarias.gr" target="_blank" rel="noopener">kokalamarias.gr</a></p>
+            </div>
+          </div>
+          <div class="contact-social">
+            <a href="https://www.facebook.com/KOKalamarias" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/kokalamarias/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@kokalamarias" target="_blank" rel="noopener" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+        <form class="contact-form" id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name" data-i18n="form.name">Όνομα</label>
+              <input type="text" id="name" data-i18n-attr="placeholder" data-i18n="form.name_ph" placeholder="Το όνομά σας" required />
+            </div>
+            <div class="form-group">
+              <label for="email" data-i18n="form.email">Email</label>
+              <input type="email" id="email" placeholder="email@example.com" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="subject" data-i18n="form.subject">Θέμα</label>
+            <select id="subject">
+              <option value="" data-i18n="form.subj_default">Επιλέξτε θέμα...</option>
+              <option data-i18n="form.subj1">Εγγραφή – Τμήμα Εκμάθησης (4–7 ετών)</option>
+              <option data-i18n="form.subj2">Εγγραφή – Ακαδημία (7–9 ετών)</option>
+              <option data-i18n="form.subj3">Εγγραφή – Προαγωνιστικό (9–12 ετών)</option>
+              <option data-i18n="form.subj4">Εγγραφή – Αγωνιστικό / Τεχνική Κολύμβηση</option>
+              <option data-i18n="form.subj5">Πληροφορίες για Τεχνική Κολύμβηση</option>
+              <option data-i18n="form.subj6">Άλλο</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message" data-i18n="form.message">Μήνυμα</label>
+            <textarea id="message" rows="5" data-i18n-attr="placeholder" data-i18n="form.message_ph" placeholder="Πείτε μας πώς μπορούμε να σας βοηθήσουμε..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">
+            <i class="fas fa-paper-plane"></i> <span data-i18n="form.send">Αποστολή Μηνύματος</span>
+          </button>
+          <div class="form-success" id="formSuccess">
+            <i class="fas fa-check-circle"></i> <span data-i18n="form.success"></span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- WAVE DIVIDER → Footer transition -->
+  <div class="wave-divider">
+    <img src="images/06-wave-divider-1920x220.png" alt="" aria-hidden="true" />
+  </div>
+
+  <div id="site-footer"></div>
+  <script src="translations.js"></script>
+  <script src="partials.js"></script>
+  <script src="site-loader.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

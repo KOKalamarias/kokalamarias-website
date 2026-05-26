@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Νέα — Κ.Ο. Καλαμαριάς</title>
+<!-- Open Graph / Social preview -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Κολυμβητικός Όμιλος Καλαμαριάς" />
+  <meta property="og:title" content="Νέα — Κ.Ο. Καλαμαριάς" />
+  <meta property="og:description" content="Τα τελευταία νέα και ανακοινώσεις του Κολυμβητικού Ομίλου Καλαμαριάς." />
+  <meta property="og:image" content="https://kokalamarias.gr/images/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="el_GR" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Νέα — Κ.Ο. Καλαμαριάς" />
+  <meta name="twitter:description" content="Τα τελευταία νέα και ανακοινώσεις του Κολυμβητικού Ομίλου Καλαμαριάς." />
+  <meta name="twitter:image" content="https://kokalamarias.gr/images/og-image.jpg" />
+
+  <link rel="icon" type="image/png" href="logo.png" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body data-page="news">
+
+  <div id="site-nav"></div>
+
+  <section class="page-hero">
+    <div class="container">
+      <span class="page-hero-tag" data-i18n="news.tag">Νέα &amp; Ανακοινώσεις</span>
+      <h1 data-i18n="news.title">Τελευταία Νέα</h1>
+      <p data-i18n="news.subtitle">Μείνετε ενημερωμένοι για τις εξελίξεις του συλλόγου</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <!-- Dynamic news grid — articles loaded from content/data/news.json -->
+      <div class="news-grid" id="newsGrid">
+        <!-- Fallback content (shown if JS fails) -->
+        <article class="news-card">
+          <div class="news-category" data-i18n="news.n2_cat">Παγκόσμιο</div>
+          <div class="news-date"><i class="fas fa-calendar"></i> <span data-i18n="news.n2_date">Παγκόσμιο Βελιγραδίου</span></div>
+          <h3 data-i18n="news.n2_title">Ασημένιο Μετάλλιο για την Ε. Καλφίδου</h3>
+          <p data-i18n="news.n2_p"></p>
+          <a href="#" class="news-link" data-i18n="news.read_more" data-i18n-html>Διαβάστε περισσότερα <i class="fas fa-arrow-right"></i></a>
+        </article>
+        <article class="news-card">
+          <div class="news-category" data-i18n="news.n3_cat">Ρεκόρ</div>
+          <div class="news-date"><i class="fas fa-calendar"></i> <span data-i18n="news.n3_date">Ευρωπαϊκό Νέων-Νεανίδων</span></div>
+          <h3 data-i18n="news.n3_title">Παγκόσμιο Ρεκόρ Νεανίδων από Ι. Τελιούση</h3>
+          <p data-i18n="news.n3_p"></p>
+          <a href="#" class="news-link" data-i18n="news.read_more" data-i18n-html>Διαβάστε περισσότερα <i class="fas fa-arrow-right"></i></a>
+        </article>
+        <article class="news-card">
+          <div class="news-category" data-i18n="news.n4_cat">Εγγραφές</div>
+          <div class="news-date"><i class="fas fa-calendar"></i> <span data-i18n="news.n4_date">Νέα σεζόν</span></div>
+          <h3 data-i18n="news.n4_title">Ανοιχτές Εγγραφές για Όλα τα Τμήματα</h3>
+          <p data-i18n="news.n4_p"></p>
+          <a href="contact.html" class="news-link" data-i18n="news.contact_us" data-i18n-html>Επικοινωνήστε μαζί μας <i class="fas fa-arrow-right"></i></a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- WAVE DIVIDER → Footer transition -->
+  <div class="wave-divider">
+    <img src="images/06-wave-divider-1920x220.png" alt="" aria-hidden="true" />
+  </div>
+
+  <div id="site-footer"></div>
+  <script src="translations.js"></script>
+  <script src="partials.js"></script>
+  <script src="site-loader.js"></script>
+  <script src="script.js"></script>
+  <script src="news-loader.js"></script>
+</body>
+</html>

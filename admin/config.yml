@@ -1,0 +1,212 @@
+# ======================================================
+#  Decap CMS — Διαχείριση Κ.Ο. Καλαμαριάς
+#  Φιλικό περιβάλλον για μη-τεχνικούς χρήστες.
+# ======================================================
+
+backend:
+  name: git-gateway
+  branch: main                  # branch όπου γίνεται commit
+
+# Φάκελος για ανέβασμα φωτογραφιών
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+# Γλώσσα UI του CMS
+locale: "el"
+
+# Όνομα του site
+site_url: https://kokalamarias.gr
+display_url: https://kokalamarias.gr
+logo_url: /logo.png
+
+# ------------------------------------------------------
+#  ΕΝΟΤΗΤΕΣ ΕΠΕΞΕΡΓΑΣΙΑΣ
+# ------------------------------------------------------
+collections:
+
+  # ====================================================
+  #  ΝΕΑ / ΑΡΘΡΑ — Πιο συχνή χρήση
+  # ====================================================
+  - name: "news"
+    label: "📰 Νέα & Ανακοινώσεις"
+    files:
+      - file: "content/data/news.json"
+        label: "Λίστα Άρθρων"
+        name: "news_list"
+        fields:
+          - label: "Άρθρα (τα νεότερα πρώτα)"
+            name: "articles"
+            widget: "list"
+            summary: "{{fields.title}} — {{fields.date}}"
+            fields:
+              - { label: "Τίτλος", name: "title", widget: "string" }
+              - { label: "Τίτλος (Αγγλικά)", name: "title_en", widget: "string", required: false }
+              - { label: "Ημερομηνία", name: "date", widget: "date" }
+              - { label: "Ετικέτα ημερομηνίας (π.χ. «Πτολεμαΐδα · Μάιος 2026»)", name: "date_label", widget: "string", required: false }
+              - { label: "Ετικέτα ημερομηνίας (Αγγλικά)", name: "date_label_en", widget: "string", required: false }
+              - label: "Κατηγορία"
+                name: "category"
+                widget: "select"
+                options:
+                  - { label: "Πρωτάθλημα", value: "championship" }
+                  - { label: "Παγκόσμιο", value: "world" }
+                  - { label: "Ευρωπαϊκό", value: "european" }
+                  - { label: "Ρεκόρ", value: "record" }
+                  - { label: "Εθνικές Ομάδες", value: "national-teams" }
+                  - { label: "Εγγραφές", value: "registration" }
+                  - { label: "Εκδήλωση", value: "event" }
+                  - { label: "Κοινωνικό", value: "social" }
+              - { label: "Κύρια φωτογραφία (προαιρετικό)", name: "image", widget: "image", required: false }
+              - { label: "Σύντομη περίληψη", name: "summary", widget: "text" }
+              - { label: "Σύντομη περίληψη (Αγγλικά)", name: "summary_en", widget: "text", required: false }
+              - { label: "Πλήρες κείμενο (markdown)", name: "body", widget: "text", required: false }
+              - { label: "Πλήρες κείμενο (Αγγλικά)", name: "body_en", widget: "text", required: false }
+              - { label: "Featured (μεγάλη κάρτα με φωτό)", name: "featured", widget: "boolean", default: false }
+              - { label: "Δημοσιευμένο", name: "published", widget: "boolean", default: true }
+
+  # ====================================================
+  #  ΑΘΛΗΤΕΣ — Πρωταθλητές
+  # ====================================================
+  - name: "athletes"
+    label: "🏊 Αθλητές / Πρωταθλητές"
+    label_singular: "Αθλητής"
+    files:
+      - file: "content/data/athletes.json"
+        label: "Λίστα Πρωταθλητών"
+        name: "athletes_list"
+        fields:
+          - label: "Πρωταθλητές"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.name}} — {{fields.specialty}}"
+            fields:
+              - { label: "Όνομα", name: "name", widget: "string" }
+              - { label: "Όνομα (αγγλικά)", name: "name_en", widget: "string" }
+              - { label: "Ειδικότητα", name: "specialty", widget: "string" }
+              - { label: "Ειδικότητα (αγγλικά)", name: "specialty_en", widget: "string" }
+              - { label: "Εικονίδιο (FontAwesome class, π.χ. fa-bolt)", name: "icon", widget: "string", default: "fa-medal" }
+              - label: "Διακρίσεις"
+                name: "achievements"
+                widget: "list"
+                fields:
+                  - { label: "Κείμενο διάκρισης (Ελληνικά)", name: "text_el", widget: "string" }
+                  - { label: "Κείμενο διάκρισης (Αγγλικά)", name: "text_en", widget: "string" }
+                  - label: "Τύπος"
+                    name: "type"
+                    widget: "select"
+                    options:
+                      - { label: "Χρυσό", value: "gold" }
+                      - { label: "Ασημένιο", value: "silver" }
+                      - { label: "Χάλκινο", value: "bronze" }
+                      - { label: "Παγκόσμιο", value: "world" }
+                      - { label: "Χρόνος / Ρεκόρ", value: "time" }
+                      - { label: "Εθνική Ομάδα", value: "flag" }
+                      - { label: "Άλλο", value: "other" }
+
+  # ====================================================
+  #  ΔΙΟΙΚΗΤΙΚΟ ΣΥΜΒΟΥΛΙΟ
+  # ====================================================
+  - name: "board"
+    label: "🏛 Διοικητικό Συμβούλιο"
+    files:
+      - file: "content/data/board.json"
+        label: "Μέλη Δ.Σ."
+        name: "board_members"
+        fields:
+          - label: "Μέλη"
+            name: "members"
+            widget: "list"
+            summary: "{{fields.role}}: {{fields.name}}"
+            fields:
+              - label: "Ρόλος"
+                name: "role"
+                widget: "select"
+                options:
+                  - "Πρόεδρος"
+                  - "Αντιπρόεδρος"
+                  - "Γενική Γραμματέας"
+                  - "Γενικός Γραμματέας"
+                  - "Ταμίας"
+                  - "Μέλος"
+              - { label: "Ρόλος (αγγλικά)", name: "role_en", widget: "string" }
+              - { label: "Όνομα", name: "name", widget: "string", required: false }
+              - { label: "Όνομα (αγγλικά)", name: "name_en", widget: "string", required: false }
+              - { label: "Εικονίδιο (FontAwesome)", name: "icon", widget: "string", default: "fa-user" }
+
+  # ====================================================
+  #  ΤΜΗΜΑΤΑ
+  # ====================================================
+  - name: "teams"
+    label: "🏊‍♂️ Τμήματα"
+    files:
+      - file: "content/data/teams.json"
+        label: "Τμήματα Κολύμβησης"
+        name: "teams_list"
+        fields:
+          - label: "Τμήματα"
+            name: "teams"
+            widget: "list"
+            summary: "{{fields.name}} — {{fields.age}}"
+            fields:
+              - { label: "Όνομα Τμήματος", name: "name", widget: "string" }
+              - { label: "Όνομα Τμήματος (αγγλικά)", name: "name_en", widget: "string" }
+              - { label: "Ηλικίες", name: "age", widget: "string" }
+              - { label: "Ηλικίες (αγγλικά)", name: "age_en", widget: "string" }
+              - { label: "Περιγραφή", name: "description", widget: "text" }
+              - { label: "Περιγραφή (αγγλικά)", name: "description_en", widget: "text" }
+              - { label: "Πρόγραμμα", name: "schedule", widget: "string" }
+              - { label: "Πρόγραμμα (αγγλικά)", name: "schedule_en", widget: "string" }
+              - { label: "Featured (Αγωνιστικό)", name: "featured", widget: "boolean", default: false }
+
+  # ====================================================
+  #  ΚΕΙΜΕΝΑ ΣΕΛΙΔΩΝ — Hero, About, Footer κλπ
+  # ====================================================
+  - name: "site_texts"
+    label: "📝 Κείμενα Σελίδων"
+    files:
+      - file: "content/data/site.json"
+        label: "Γενικά Κείμενα Site"
+        name: "site_general"
+        fields:
+          - label: "Hero (Αρχική)"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Badge κειμένου (π.χ. ★ 5 Συνεχόμενα Πανελλήνια)", name: "badge", widget: "string" }
+              - { label: "Tagline (μικρό κείμενο κάτω από τίτλο)", name: "tagline", widget: "string" }
+
+          - label: "Σχετικά (About)"
+            name: "about"
+            widget: "object"
+            fields:
+              - { label: "Τίτλος", name: "title", widget: "string" }
+              - { label: "Υπότιτλος", name: "subtitle", widget: "string" }
+              - { label: "Παράγραφος 1", name: "p1", widget: "text" }
+              - { label: "Παράγραφος 2", name: "p2", widget: "text" }
+              - { label: "Παράγραφος 3", name: "p3", widget: "text" }
+
+          - label: "Παράκτια Κωπηλασία"
+            name: "coastal"
+            widget: "object"
+            fields:
+              - { label: "Badge", name: "badge", widget: "string" }
+              - { label: "Περιγραφή", name: "description", widget: "text" }
+              - { label: "CTA κουμπί", name: "cta", widget: "string" }
+
+          - label: "Επικοινωνία"
+            name: "contact"
+            widget: "object"
+            fields:
+              - { label: "Τίτλος", name: "title", widget: "string" }
+              - { label: "Διεύθυνση", name: "address", widget: "string" }
+              - { label: "Τηλέφωνο", name: "phone", widget: "string" }
+              - { label: "Email", name: "email", widget: "string" }
+              - { label: "Google Maps URL", name: "maps_url", widget: "string" }
+
+          - label: "Social Media URLs"
+            name: "social"
+            widget: "object"
+            fields:
+              - { label: "Facebook", name: "facebook", widget: "string" }
+              - { label: "Instagram", name: "instagram", widget: "string" }
+              - { label: "TikTok", name: "tiktok", widget: "string" }

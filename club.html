@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-i18n="page.club.title">Ο Όμιλος — Κ.Ο. Καλαμαριάς</title>
+<!-- Open Graph / Social preview -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Κολυμβητικός Όμιλος Καλαμαριάς" />
+  <meta property="og:title" content="Ο Όμιλος — Κ.Ο. Καλαμαριάς" />
+  <meta property="og:description" content="Ιστορία, Διοικητικό Συμβούλιο και προπονητικό επιτελείο του Κ.Ο. Καλαμαριάς." />
+  <meta property="og:image" content="https://kokalamarias.gr/images/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="el_GR" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Ο Όμιλος — Κ.Ο. Καλαμαριάς" />
+  <meta name="twitter:description" content="Ιστορία, Διοικητικό Συμβούλιο και προπονητικό επιτελείο του Κ.Ο. Καλαμαριάς." />
+  <meta name="twitter:image" content="https://kokalamarias.gr/images/og-image.jpg" />
+
+  <link rel="icon" type="image/png" href="logo.png" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body data-page="club">
+
+  <div id="site-nav"></div>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <span class="page-hero-tag" data-i18n="nav.club">Ο Όμιλος</span>
+      <h1 data-i18n="club.title">Διοίκηση & Οργάνωση</h1>
+      <p data-i18n="club.subtitle">Οι άνθρωποι και το πλαίσιο πίσω από την αγωνιστική ομάδα</p>
+    </div>
+  </section>
+
+  <!-- ABOUT (full version) -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="about.tag">Σχετικά με εμάς</span>
+        <h2 data-i18n="about.title">Η Ιστορία μας</h2>
+        <p data-i18n="about.subtitle">Ένα πρότυπο αθλητικής εξέλιξης στον υγρό στίβο</p>
+      </div>
+      <div class="about-grid">
+        <div class="about-text">
+          <p data-i18n="about.p1" data-i18n-html></p>
+          <p data-i18n="about.p2" data-i18n-html></p>
+          <p data-i18n="about.p3" data-i18n-html></p>
+          <div class="about-highlights">
+            <div class="highlight"><i class="fas fa-trophy"></i><span data-i18n="about.h1"></span></div>
+            <div class="highlight"><i class="fas fa-globe-europe"></i><span data-i18n="about.h2"></span></div>
+            <div class="highlight"><i class="fas fa-users"></i><span data-i18n="about.h3"></span></div>
+            <div class="highlight"><i class="fas fa-map-marker-alt"></i><span data-i18n="about.h4"></span></div>
+          </div>
+        </div>
+        <div class="about-visual">
+          <div class="about-card">
+            <div class="about-card-inner">
+              <i class="fas fa-medal"></i>
+              <h3 data-i18n="about.card1_title">Επιτυχίες</h3>
+              <p data-i18n="about.card1_p"></p>
+            </div>
+          </div>
+          <div class="about-card accent" id="coaches">
+            <div class="about-card-inner">
+              <i class="fas fa-chalkboard-teacher"></i>
+              <h3 data-i18n="about.card2_title">Προπονητικό Επιτελείο</h3>
+              <p data-i18n="about.card2_p" data-i18n-html></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOARD + ORGANISATION -->
+  <section class="section section-alt" id="board">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="club.tag">Ο Όμιλος</span>
+        <h2 data-i18n="club.title">Διοίκηση &amp; Οργάνωση</h2>
+        <p data-i18n="club.subtitle"></p>
+      </div>
+
+      <h3 class="club-subheading" data-i18n="club.board_heading">Διοικητικό Συμβούλιο</h3>
+      <div class="board-grid" id="boardGrid">
+        <!-- Members rendered dynamically from content/data/board.json -->
+      </div>
+
+            <h3 class="club-subheading" data-i18n="club.inst_heading">Οργάνωση</h3>
+      <div class="institutional-grid">
+        <div class="inst-card">
+          <i class="fas fa-calendar-day"></i>
+          <div>
+            <strong data-i18n="club.i1_label">Έτος Ίδρυσης</strong>
+            <span data-i18n="club.i1_value">2008</span>
+          </div>
+        </div>
+        <div class="inst-card">
+          <i class="fas fa-id-card"></i>
+          <div>
+            <strong data-i18n="club.i2_label">Μέλος Κ.Ο.Ε.</strong>
+            <span data-i18n="club.i2_value">Κωδικός σωματείου ΦΓ42 / 101</span>
+          </div>
+        </div>
+        <div class="inst-card">
+          <i class="fas fa-globe-europe"></i>
+          <div>
+            <strong data-i18n="club.i3_label">Μέλος CMAS</strong>
+            <span data-i18n="club.i3_value">Παγκόσμια Ομοσπονδία Υποβρύχιας Δραστηριότητας</span>
+          </div>
+        </div>
+        <div class="inst-card">
+          <i class="fas fa-swimming-pool"></i>
+          <div>
+            <strong data-i18n="club.i4_label">Εγκαταστάσεις</strong>
+            <span data-i18n="club.i4_value">Δημοτικό Κολυμβητήριο Καλαμαριάς</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WAVE DIVIDER → Footer transition -->
+  <div class="wave-divider">
+    <img src="images/06-wave-divider-1920x220.png" alt="" aria-hidden="true" />
+  </div>
+
+  <div id="site-footer"></div>
+
+  <script src="translations.js"></script>
+  <script src="partials.js"></script>
+  <script src="site-loader.js"></script>
+  <script src="script.js"></script>
+  <script src="board-loader.js"></script>
+</body>
+</html>

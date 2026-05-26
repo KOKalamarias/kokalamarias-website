@@ -1,0 +1,79 @@
+{
+  "articles": [
+    {
+      "title": "Πέντε αθλητές του Κ.Ο. Καλαμαριάς στις Εθνικές Ομάδες",
+      "title_en": "Five K.O. Kalamarias athletes called up to the National Teams",
+      "date": "2026-05-13",
+      "date_label": "Διεθνείς Διοργανώσεις 2026",
+      "date_label_en": "International Events 2026",
+      "category": "national-teams",
+      "image": "images/news-national-teams.jpg",
+      "summary": "Πέντε αθλητές και αθλήτριες του Κολυμβητικού Ομίλου Καλαμαριάς κλήθηκαν στις **Εθνικές Ομάδες** για τις κορυφαίες διεθνείς διοργανώσεις της χρονιάς: **Ηλίας Καλφίδης, Ελένη Καλφίδου, Αγγελική Κίρδα, Γιώργος Παναγιωτίδης** και **Ιφιγένεια Τελιούση**.",
+      "summary_en": "Five athletes from Kolymvitikos Omilos Kalamarias have been called up to the **National Teams** for the year's top international events: **Ilias Kalfidis, Eleni Kalfidou, Angeliki Kirda, Giorgos Panagiotidis** and **Ifigeneia Teliousi**.",
+      "body": "**Συμμετοχές ανά διοργάνωση:**\n\n- 🌍 **Παγκόσμιο Πρωτάθλημα:** Ελένη Καλφίδου, Γιώργος Παναγιωτίδης, Ιφιγένεια Τελιούση\n- 🇪🇺 **Ευρωπαϊκό Πρωτάθλημα:** Ελένη Καλφίδου, Αγγελική Κίρδα\n- 🏅 **Μεσογειακοί Αγώνες:** Ηλίας Καλφίδης, Ιφιγένεια Τελιούση\n\nΣυγχαρητήρια στους αθλητές για τις διακρίσεις τους, καθώς και στους προπονητές **Παύλο Μπάπκα** και **Στράτο Μαλαμαδάκη** για την καθοδήγηση και την προετοιμασία τους. Καλή επιτυχία σε όλους στη συνέχεια.",
+      "body_en": "**Participation by event:**\n\n- 🌍 **World Championship:** Eleni Kalfidou, Giorgos Panagiotidis, Ifigeneia Teliousi\n- 🇪🇺 **European Championship:** Eleni Kalfidou, Angeliki Kirda\n- 🏅 **Mediterranean Games:** Ilias Kalfidis, Ifigeneia Teliousi\n\nCongratulations to the athletes on their distinctions, as well as to coaches **Pavlos Bapkas** and **Stratos Malamadakis** for their guidance and preparation. Best of luck to everyone ahead.",
+      "featured": true,
+      "published": true
+    },
+    {
+      "title": "5 στα 5! Νέα Πανελλήνια Πρωτιά στην Τεχνική Κολύμβηση",
+      "title_en": "5 in a Row! New Hellenic Title in Finswimming",
+      "date": "2026-05-10",
+      "date_label": "Πτολεμαΐδα · Μάιος 2026",
+      "date_label_en": "Ptolemaida · May 2026",
+      "category": "championship",
+      "image": "images/team-celebration.jpg",
+      "summary": "Ο Κ.Ο. Καλαμαριάς κατέκτησε για 5η συνεχόμενη χρονιά το Εθνικό Πρωτάθλημα Τεχνικής Κολύμβησης Ανδρών-Γυναικών. Πρωτιά στη Γενική Βαθμολογία και στις Γυναίκες, 2η θέση στους Άνδρες σε διαφορά μόλις 3 βαθμών. Συγχαρητήρια σε όλους τους αθλητές, τους προπονητές και τους «αφανείς ήρωες» γονείς.",
+      "summary_en": "K.O. Kalamarias won the National Finswimming Championship (Men-Women) for the 5th consecutive year. 1st place in the General standings and in Women, 2nd in Men by just 3 points. Congratulations to all athletes, coaches and the “unsung hero” parents.",
+      "body": "",
+      "body_en": "",
+      "featured": true,
+      "published": true
+    },
+    {
+      "title": "Ασημένιο Μετάλλιο για την Ε. Καλφίδου",
+      "title_en": "Silver Medal for E. Kalfidou",
+      "date": "2026-04-15",
+      "date_label": "Παγκόσμιο Βελιγραδίου",
+      "date_label_en": "Belgrade World Championship",
+      "category": "world",
+      "image": "",
+      "summary": "Στα 1500μ επιφάνειας με χρόνο **13:36.09** — νέο Πανελλήνιο Ρεκόρ. Μια εκπληκτική επίδοση απέναντι στις κορυφαίες αθλήτριες του πλανήτη.",
+      "summary_en": "In the 1500m surface with a time of **13:36.09** — new Hellenic Record. An outstanding performance against the world's top athletes.",
+      "body": "",
+      "body_en": "",
+      "featured": false,
+      "published": true
+    },
+    {
+      "title": "Παγκόσμιο Ρεκόρ Νεανίδων από Ι. Τελιούση",
+      "title_en": "World Youth Record by I. Teliousi",
+      "date": "2026-03-20",
+      "date_label": "Ευρωπαϊκό Νέων-Νεανίδων",
+      "date_label_en": "European Youth Championship",
+      "category": "record",
+      "image": "",
+      "summary": "Στην Κλαϊπέντα της Λιθουανίας, η Ιφιγένεια Τελιούση κατέρριψε το Παγκόσμιο Ρεκόρ Νεανίδων στα 50μ επιφάνειας και το Ευρωπαϊκό Ρεκόρ στα 50μ άπνοιας.",
+      "summary_en": "In Klaipėda, Lithuania, Ifigeneia Teliousi broke the World Youth Record in the 50m surface and the European Record in the 50m apnea.",
+      "body": "",
+      "body_en": "",
+      "featured": false,
+      "published": true
+    },
+    {
+      "title": "Ανοιχτές Εγγραφές για Όλα τα Τμήματα",
+      "title_en": "Open Registrations for All Teams",
+      "date": "2026-01-15",
+      "date_label": "Νέα σεζόν",
+      "date_label_en": "New season",
+      "category": "registration",
+      "image": "",
+      "summary": "Ξεκίνησαν οι εγγραφές για Τμήματα Εκμάθησης, Ακαδημίας, Προαγωνιστικού και Αγωνιστικού. Ελάτε να γνωρίσετε από κοντά τον σύλλογο και τους προπονητές.",
+      "summary_en": "Registrations have opened for Learn-to-Swim, Academy, Pre-Competitive and Competitive teams. Come meet the club and our coaches.",
+      "body": "",
+      "body_en": "",
+      "featured": false,
+      "published": true
+    }
+  ]
+}
