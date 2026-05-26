@@ -97,6 +97,8 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault();
       const name = document.getElementById('name').value.trim();
       const email = document.getElementById('email').value.trim();
+      const phoneEl = document.getElementById('phone');
+      const phone = phoneEl ? phoneEl.value.trim() : '';
       const subject = document.getElementById('subject').value.trim() || 'Website contact';
       const message = document.getElementById('message').value.trim();
       const isEN = document.documentElement.lang === 'en';
@@ -118,6 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
             from_name: 'Κ.Ο. Καλαμαριάς — Φόρμα Επικοινωνίας',
             name,
             email,
+            phone,
             topic: subject,
             message,
             botcheck: '',
