@@ -39,9 +39,13 @@
       ? `<h3><a href="${profileURL}">${name}</a></h3>`
       : `<h3>${name}</h3>`;
 
+    const avatarBlock = athlete.photo
+      ? `<div class="champion-avatar champion-avatar-photo"><img src="${athlete.photo}" alt="${name}" loading="lazy" /></div>`
+      : `<div class="champion-avatar"><i class="fas ${icon}"></i></div>`;
+
     return `<article class="champion-card">
       <div class="champion-header">
-        <div class="champion-avatar"><i class="fas ${icon}"></i></div>
+        ${avatarBlock}
         <div>
           ${titleBlock}
           <span class="champion-spec">${spec}</span>

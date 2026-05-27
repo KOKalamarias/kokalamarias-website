@@ -87,6 +87,7 @@ collections:
               - { label: "Όνομα", name: "name", widget: "string" }
               - { label: "Όνομα (αγγλικά)", name: "name_en", widget: "string" }
               - { label: "URL slug (μοναδική διεύθυνση προφίλ)", name: "slug", widget: "string", required: false, hint: "Π.χ. 'panagiotidis-giorgos'. Θα γίνει: kokalamarias.gr/champions/panagiotidis-giorgos. Μόνο μικρά αγγλικά, αριθμοί, παύλες.", pattern: ["^[a-z0-9-]*$", "Μόνο μικρά αγγλικά, αριθμοί και παύλες"] }
+              - { label: "Φωτογραφία (προαιρετικό)", name: "photo", widget: "image", required: false, hint: "Ιδανικά τετράγωνη, ≥400x400px. Αν λείπει, εμφανίζεται εικονίδιο." }
               - { label: "Ειδικότητα", name: "specialty", widget: "string" }
               - { label: "Ειδικότητα (αγγλικά)", name: "specialty_en", widget: "string" }
               - { label: "Εικονίδιο (FontAwesome class, π.χ. fa-bolt)", name: "icon", widget: "string", default: "fa-medal" }

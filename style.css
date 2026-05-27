@@ -1757,3 +1757,27 @@ html[lang="en"] .lang-only-el { display: none !important; }
   .article-title { font-size: 1.5rem; }
   .article-summary { font-size: 1rem; }
 }
+
+/* ============================================
+   Champion avatar with photo (replaces icon)
+   ============================================ */
+.champion-avatar.champion-avatar-photo {
+  padding: 0;
+  overflow: hidden;
+  background: #f0f7fd;
+}
+.champion-avatar.champion-avatar-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.champion-avatar.champion-avatar-large {
+  width: 120px;
+  height: 120px;
+  font-size: 2.5rem;
+}
+.champion-avatar.champion-avatar-large.champion-avatar-photo img {
+  width: 120px;
+  height: 120px;
+}

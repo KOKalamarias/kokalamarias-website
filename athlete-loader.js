@@ -31,6 +31,9 @@
     const name = pick(athlete, "name", lang);
     const spec = pick(athlete, "specialty", lang);
     const desc = `${name} — ${spec}. ${lang === "en" ? "Athlete of Kalamaria Swimming Club." : "Αθλητής/τρια του Κ.Ο. Καλαμαριάς."}`;
+    const image = athlete.photo
+      ? new URL(athlete.photo.replace(/^\//, ""), window.location.origin).href
+      : "https://www.kokalamarias.gr/images/og-image.jpg";
     document.title = name + " — Κ.Ο. Καλαμαριάς";
     const setAttr = (id, attr, value) => {
       const el = document.getElementById(id);
@@ -39,8 +42,10 @@
     setAttr("metaDesc", "content", desc);
     setAttr("ogTitle", "content", name + " — Κ.Ο. Καλαμαριάς");
     setAttr("ogDesc", "content", desc);
+    setAttr("ogImage", "content", image);
     setAttr("twTitle", "content", name + " — Κ.Ο. Καλαμαριάς");
     setAttr("twDesc", "content", desc);
+    setAttr("twImage", "content", image);
   }
 
   function render(athlete, lang) {
@@ -54,10 +59,14 @@
       return `<li><i class="fas ${t.icon} ${t.cls}"></i> <span>${text}</span></li>`;
     }).join("");
 
+    const avatarBlock = athlete.photo
+      ? `<div class="champion-avatar champion-avatar-photo champion-avatar-large"><img src="${athlete.photo}" alt="${name}" /></div>`
+      : `<div class="champion-avatar champion-avatar-large"><i class="fas ${icon}"></i></div>`;
+
     container.innerHTML = `
       <article class="champion-card champion-page">
         <div class="champion-header">
-          <div class="champion-avatar"><i class="fas ${icon}"></i></div>
+          ${avatarBlock}
           <div>
             <h1>${name}</h1>
             <span class="champion-spec">${spec}</span>
