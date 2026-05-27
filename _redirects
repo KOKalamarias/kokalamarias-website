@@ -1,9 +1,6 @@
 # Cloudflare Pages URL rewrites for individual content pages
-# Format: /from-path /to-path status-code
-# Status 200 = rewrite (URL stays the same in browser)
-# Status 301 = permanent redirect
+# Note: Cloudflare Pages auto-strips ".html", so we point to the bare path.
 
-# Individual article/athlete/team pages
-/news/:slug      /article.html  200
-/champions/:slug /athlete.html  200
-/teams/:slug     /team.html     200
+/news/:slug       /article  200
+/champions/:slug  /athlete  200
+/teams/:slug      /team     200
