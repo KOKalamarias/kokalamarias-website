@@ -1,11 +1,39 @@
 {
   "members": [
-    { "role": "Πρόεδρος", "role_en": "President", "name": "Γιώργος Αρμουτσής", "name_en": "Giorgos Armoutsis", "icon": "fa-user-tie" },
-    { "role": "Αντιπρόεδρος", "role_en": "Vice President", "name": "Γιώργος Τσίκλης", "name_en": "Giorgos Tsiklis", "icon": "fa-user" },
-    { "role": "Γενική Γραμματέας", "role_en": "Secretary General", "name": "Βίκη Τσίκλη", "name_en": "Viki Tsikli", "icon": "fa-pen-nib" },
-    { "role": "Ταμίας", "role_en": "Treasurer", "name": "Ξανθή Τσιτουρίδου", "name_en": "Xanthi Tsitouridou", "icon": "fa-coins" },
-    { "role": "Μέλος", "role_en": "Member", "name": "Βαλεντίνη Παναγιωτίδου", "name_en": "Valentini Panagiotidou", "icon": "fa-users" },
-    { "role": "Μέλος", "role_en": "Member", "name": "", "name_en": "", "icon": "fa-users" },
-    { "role": "Μέλος", "role_en": "Member", "name": "", "name_en": "", "icon": "fa-users" }
+    {
+      "role": "Πρόεδρος",
+      "role_en": "President",
+      "name": "Γιώργος Αρμουτσής",
+      "name_en": "Giorgos Armoutsis",
+      "icon": "fa-user-tie"
+    },
+    {
+      "role": "Αντιπρόεδρος",
+      "role_en": "Vice President",
+      "name": "Γιώργος Τσίκλης",
+      "name_en": "Giorgos Tsiklis",
+      "icon": "fa-user"
+    },
+    {
+      "role": "Γενική Γραμματέας",
+      "role_en": "Secretary General",
+      "name": "Βίκη Τσίκλη",
+      "name_en": "Viki Tsikli",
+      "icon": "fa-pen-nib"
+    },
+    {
+      "role": "Ταμίας",
+      "role_en": "Treasurer",
+      "name": "Ξανθή Τσιτουρίδου",
+      "name_en": "Xanthi Tsitouridou",
+      "icon": "fa-coins"
+    },
+    {
+      "role": "Μέλος",
+      "role_en": "Member",
+      "name": "Βαλεντίνη Παναγιωτίδου",
+      "name_en": "Valentini Panagiotidou",
+      "icon": "fa-users"
+    }
   ]
 }
