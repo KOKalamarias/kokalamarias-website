@@ -27,7 +27,8 @@
           "text_en": "Top Female Athlete, Hellenic Championship (901 CMAS pts)",
           "type": "other"
         }
-      ]
+      ],
+      "slug": "ifigeneia-teliousi"
     },
     {
       "name": "Ελένη Καλφίδου",
@@ -56,7 +57,8 @@
           "text_en": "Hellenic Record — 13:36.09",
           "type": "time"
         }
-      ]
+      ],
+      "slug": "eleni-kalfidou"
     },
     {
       "name": "Βασίλης Λογοθέτης",
@@ -80,7 +82,8 @@
           "text_en": "Member of Youth National Team",
           "type": "flag"
         }
-      ]
+      ],
+      "slug": "vasilis-logothetis"
     },
     {
       "name": "Ευάγγελος Σ. Νικολαΐδης",
@@ -104,7 +107,8 @@
           "text_en": "Men's National Team",
           "type": "flag"
         }
-      ]
+      ],
+      "slug": "evangelos-nikolaidis"
     },
     {
       "name": "Απόστολος Λαμπαδάρης",
@@ -128,7 +132,8 @@
           "text_en": "Regular member of 4x200m relay",
           "type": "other"
         }
-      ]
+      ],
+      "slug": "apostolos-lampadaris"
     },
     {
       "name": "Γιώργος Παναγιωτίδης",
@@ -157,7 +162,8 @@
           "text_en": "Kolymvitikos Omilos Kalamarias Hall of Fame",
           "type": "other"
         }
-      ]
+      ],
+      "slug": "giorgos-panagiotidis"
     },
     {
       "name": "Ιωάννης Αργυρόπουλος",
@@ -181,7 +187,8 @@
           "text_en": "Open Water National Team",
           "type": "flag"
         }
-      ]
+      ],
+      "slug": "ioannis-argyropoulos"
     },
     {
       "name": "Ηλίας Καλφίδης",
@@ -210,7 +217,8 @@
           "text_en": "Open Water National Team",
           "type": "flag"
         }
-      ]
+      ],
+      "slug": "ilias-kalfidis"
     },
     {
       "name": "Μάριος Αρμουτσής",
@@ -239,7 +247,8 @@
           "text_en": "Men's Open Water National Team",
           "type": "flag"
         }
-      ]
+      ],
+      "slug": "marios-armoutsis"
     }
   ]
 }

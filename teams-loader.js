@@ -30,6 +30,12 @@
       const team = cache[idx];
       if (!team) return;
 
+      // If the card is on teams.html and has a slug, redirect to the individual team page
+      // We only override the href on /teams (not on the home page index.html)
+      if (team.slug && document.body.dataset.page === "teams") {
+        card.setAttribute("href", `/teams/${team.slug}`);
+      }
+
       // Remove old caption if any
       const existing = card.querySelector(".program-caption");
       if (existing) existing.remove();

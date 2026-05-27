@@ -44,6 +44,7 @@ collections:
             fields:
               - { label: "Τίτλος", name: "title", widget: "string" }
               - { label: "Τίτλος (Αγγλικά)", name: "title_en", widget: "string", required: false }
+              - { label: "URL slug (μοναδική διεύθυνση άρθρου)", name: "slug", widget: "string", required: false, hint: "Π.χ. '5o-protathlima'. Θα γίνει: kokalamarias.gr/news/5o-protathlima. Μόνο μικρά αγγλικά, αριθμοί, παύλες (-).", pattern: ["^[a-z0-9-]*$", "Μόνο μικρά αγγλικά, αριθμοί και παύλες"] }
               - { label: "Ημερομηνία", name: "date", widget: "date" }
               - { label: "Ετικέτα ημερομηνίας (π.χ. «Πτολεμαΐδα · Μάιος 2026»)", name: "date_label", widget: "string", required: false }
               - { label: "Ετικέτα ημερομηνίας (Αγγλικά)", name: "date_label_en", widget: "string", required: false }
@@ -85,6 +86,7 @@ collections:
             fields:
               - { label: "Όνομα", name: "name", widget: "string" }
               - { label: "Όνομα (αγγλικά)", name: "name_en", widget: "string" }
+              - { label: "URL slug (μοναδική διεύθυνση προφίλ)", name: "slug", widget: "string", required: false, hint: "Π.χ. 'panagiotidis-giorgos'. Θα γίνει: kokalamarias.gr/champions/panagiotidis-giorgos. Μόνο μικρά αγγλικά, αριθμοί, παύλες.", pattern: ["^[a-z0-9-]*$", "Μόνο μικρά αγγλικά, αριθμοί και παύλες"] }
               - { label: "Ειδικότητα", name: "specialty", widget: "string" }
               - { label: "Ειδικότητα (αγγλικά)", name: "specialty_en", widget: "string" }
               - { label: "Εικονίδιο (FontAwesome class, π.χ. fa-bolt)", name: "icon", widget: "string", default: "fa-medal" }
@@ -153,6 +155,7 @@ collections:
             fields:
               - { label: "Όνομα Τμήματος", name: "name", widget: "string" }
               - { label: "Όνομα Τμήματος (αγγλικά)", name: "name_en", widget: "string" }
+              - { label: "URL slug (μοναδική διεύθυνση τμήματος)", name: "slug", widget: "string", required: false, hint: "Π.χ. 'academy'. Θα γίνει: kokalamarias.gr/teams/academy. Μόνο μικρά αγγλικά, αριθμοί, παύλες.", pattern: ["^[a-z0-9-]*$", "Μόνο μικρά αγγλικά, αριθμοί και παύλες"] }
               - { label: "Ηλικίες", name: "age", widget: "string" }
               - { label: "Ηλικίες (αγγλικά)", name: "age_en", widget: "string" }
               - { label: "Περιγραφή", name: "description", widget: "text" }

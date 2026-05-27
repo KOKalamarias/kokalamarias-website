@@ -26,6 +26,8 @@
     const name = pick(athlete, "name", lang);
     const spec = pick(athlete, "specialty", lang);
     const icon = athlete.icon || "fa-medal";
+    const slug = athlete.slug || "";
+    const profileURL = slug ? `/champions/${slug}` : null;
 
     const achievementsHtml = (athlete.achievements || []).map(a => {
       const t = TYPE_ICON[a.type] || TYPE_ICON.other;
@@ -33,11 +35,15 @@
       return `<li><i class="fas ${t.icon} ${t.cls}"></i> <span>${text}</span></li>`;
     }).join("");
 
+    const titleBlock = profileURL
+      ? `<h3><a href="${profileURL}">${name}</a></h3>`
+      : `<h3>${name}</h3>`;
+
     return `<article class="champion-card">
       <div class="champion-header">
         <div class="champion-avatar"><i class="fas ${icon}"></i></div>
         <div>
-          <h3>${name}</h3>
+          ${titleBlock}
           <span class="champion-spec">${spec}</span>
         </div>
       </div>

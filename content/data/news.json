@@ -13,7 +13,8 @@
       "body": "**Συμμετοχές ανά διοργάνωση:**\n\n- 🌍 **Παγκόσμιο Πρωτάθλημα:** Ελένη Καλφίδου, Γιώργος Παναγιωτίδης, Ιφιγένεια Τελιούση\n- 🇪🇺 **Ευρωπαϊκό Πρωτάθλημα:** Ελένη Καλφίδου, Αγγελική Κίρδα\n- 🏅 **Μεσογειακοί Αγώνες:** Ηλίας Καλφίδης, Ιφιγένεια Τελιούση\n\nΣυγχαρητήρια στους αθλητές για τις διακρίσεις τους, καθώς και στους προπονητές **Παύλο Μπάπκα** και **Στράτο Μαλαμαδάκη** για την καθοδήγηση και την προετοιμασία τους. Καλή επιτυχία σε όλους στη συνέχεια.",
       "body_en": "**Participation by event:**\n\n- 🌍 **World Championship:** Eleni Kalfidou, Giorgos Panagiotidis, Ifigeneia Teliousi\n- 🇪🇺 **European Championship:** Eleni Kalfidou, Angeliki Kirda\n- 🏅 **Mediterranean Games:** Ilias Kalfidis, Ifigeneia Teliousi\n\nCongratulations to the athletes on their distinctions, as well as to coaches **Pavlos Bapkas** and **Stratos Malamadakis** for their guidance and preparation. Best of luck to everyone ahead.",
       "featured": true,
-      "published": true
+      "published": true,
+      "slug": "5-athletes-national-teams"
     },
     {
       "title": "5 στα 5! Νέα Πανελλήνια Πρωτιά στην Τεχνική Κολύμβηση",
@@ -28,7 +29,8 @@
       "body": "",
       "body_en": "",
       "featured": true,
-      "published": true
+      "published": true,
+      "slug": "5-in-a-row-finswimming-title"
     },
     {
       "title": "Ασημένιο Μετάλλιο για την Ε. Καλφίδου",
@@ -43,7 +45,8 @@
       "body": "",
       "body_en": "",
       "featured": false,
-      "published": true
+      "published": true,
+      "slug": "kalfidou-silver-belgrade"
     },
     {
       "title": "Παγκόσμιο Ρεκόρ Νεανίδων από Ι. Τελιούση",
@@ -58,7 +61,8 @@
       "body": "",
       "body_en": "",
       "featured": false,
-      "published": true
+      "published": true,
+      "slug": "teliousi-youth-world-record"
     },
     {
       "title": "Ανοιχτές Εγγραφές για Όλα τα Τμήματα",
@@ -73,7 +77,8 @@
       "body": "",
       "body_en": "",
       "featured": false,
-      "published": true
+      "published": true,
+      "slug": "2026-registrations-open"
     }
   ]
 }

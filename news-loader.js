@@ -57,27 +57,42 @@
     const summary = md(pick(article, "summary", lang));
     const body = md(pick(article, "body", lang));
     const isFeatured = article.featured && article.image;
+    const slug = article.slug || "";
+    const articleURL = slug ? `/news/${slug}` : null;
+    const readMoreLabel = lang === "en" ? "Read more" : "Διαβάστε περισσότερα";
+    const readMoreLink = articleURL
+      ? `<a href="${articleURL}" class="news-link">${readMoreLabel} <i class="fas fa-arrow-right"></i></a>`
+      : "";
 
     if (isFeatured) {
+      const photoBlock = articleURL
+        ? `<a href="${articleURL}" class="news-photo"><img src="${article.image}" alt="${title}" loading="lazy" /></a>`
+        : `<div class="news-photo"><img src="${article.image}" alt="${title}" loading="lazy" /></div>`;
+      const titleBlock = articleURL
+        ? `<h3><a href="${articleURL}">${title}</a></h3>`
+        : `<h3>${title}</h3>`;
       return `<article class="news-card featured-news has-photo">
-        <div class="news-photo">
-          <img src="${article.image}" alt="${title}" loading="lazy" />
-        </div>
+        ${photoBlock}
         <div class="news-body">
           <div class="news-category">${cat}</div>
           <div class="news-date"><i class="fas fa-calendar"></i> ${dateLabel}</div>
-          <h3>${title}</h3>
+          ${titleBlock}
           ${summary}
           ${body ? `<div class="news-body-extra">${body}</div>` : ""}
+          ${readMoreLink}
         </div>
       </article>`;
     }
 
+    const titleBlock = articleURL
+      ? `<h3><a href="${articleURL}">${title}</a></h3>`
+      : `<h3>${title}</h3>`;
     return `<article class="news-card">
       <div class="news-category">${cat}</div>
       <div class="news-date"><i class="fas fa-calendar"></i> ${dateLabel}</div>
-      <h3>${title}</h3>
+      ${titleBlock}
       ${summary}
+      ${readMoreLink}
     </article>`;
   }
 

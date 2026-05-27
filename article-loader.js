@@ -1,0 +1,153 @@
+// =====================================================
+//  Article Loader — Φορτώνει συγκεκριμένο άρθρο από slug στο URL
+//  URL pattern: /news/[slug]  →  rewritten to /article.html
+// =====================================================
+
+(function () {
+  const container = document.getElementById("articleContent");
+  if (!container) return;
+
+  const CATEGORY_LABELS = {
+    championship: { el: "Πρωτάθλημα", en: "Championship" },
+    world: { el: "Παγκόσμιο", en: "World" },
+    european: { el: "Ευρωπαϊκό", en: "European" },
+    record: { el: "Ρεκόρ", en: "Record" },
+    "national-teams": { el: "Εθνικές Ομάδες", en: "National Teams" },
+    registration: { el: "Εγγραφές", en: "Registration" },
+    event: { el: "Εκδήλωση", en: "Event" },
+    social: { el: "Κοινωνικό", en: "Community" }
+  };
+
+  function md(text) {
+    if (!text) return "";
+    let html = text
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>");
+    const lines = html.split("\n");
+    const out = [];
+    let inList = false;
+    for (const line of lines) {
+      const isLi = /^\s*[-*]\s+/.test(line);
+      if (isLi) {
+        if (!inList) { out.push("<ul>"); inList = true; }
+        out.push("<li>" + line.replace(/^\s*[-*]\s+/, "") + "</li>");
+      } else {
+        if (inList) { out.push("</ul>"); inList = false; }
+        if (line.trim()) out.push("<p>" + line + "</p>");
+      }
+    }
+    if (inList) out.push("</ul>");
+    return out.join("\n");
+  }
+
+  function pick(article, field, lang) {
+    const enKey = field + "_en";
+    if (lang === "en" && article[enKey]) return article[enKey];
+    return article[field] || "";
+  }
+
+  function getSlugFromURL() {
+    // Path looks like "/news/5o-protathlima" (no trailing slash) or "/news/5o-protathlima/"
+    const path = window.location.pathname.replace(/\/+$/, "");
+    const parts = path.split("/").filter(Boolean);
+    return parts[1] || "";
+  }
+
+  function updateMeta(article, lang) {
+    const title = pick(article, "title", lang);
+    const summary = pick(article, "summary", lang).replace(/\*\*/g, "").substring(0, 200);
+    const image = article.image
+      ? new URL(article.image.replace(/^\//, ""), window.location.origin).href
+      : "https://www.kokalamarias.gr/images/og-image.jpg";
+
+    document.title = title + " — Κ.Ο. Καλαμαριάς";
+    const setAttr = (id, attr, value) => {
+      const el = document.getElementById(id);
+      if (el) el.setAttribute(attr, value);
+    };
+    setAttr("metaDesc", "content", summary);
+    setAttr("ogTitle", "content", title + " — Κ.Ο. Καλαμαριάς");
+    setAttr("ogDesc", "content", summary);
+    setAttr("ogImage", "content", image);
+    setAttr("twTitle", "content", title + " — Κ.Ο. Καλαμαριάς");
+    setAttr("twDesc", "content", summary);
+    setAttr("twImage", "content", image);
+  }
+
+  function render(article, lang) {
+    const title = pick(article, "title", lang);
+    const dateLabel = pick(article, "date_label", lang);
+    const summary = md(pick(article, "summary", lang));
+    const body = md(pick(article, "body", lang));
+    const cat = CATEGORY_LABELS[article.category]
+      ? CATEGORY_LABELS[article.category][lang] || CATEGORY_LABELS[article.category].el
+      : article.category;
+
+    const imageBlock = article.image
+      ? `<div class="article-hero-photo"><img src="${article.image}" alt="${title}" /></div>`
+      : "";
+
+    container.innerHTML = `
+      ${imageBlock}
+      <div class="article-meta">
+        <span class="news-category">${cat}</span>
+        ${dateLabel ? `<span class="news-date"><i class="fas fa-calendar"></i> ${dateLabel}</span>` : ""}
+      </div>
+      <h1 class="article-title">${title}</h1>
+      <div class="article-summary">${summary}</div>
+      ${body ? `<div class="article-body">${body}</div>` : ""}
+      <div class="article-footer">
+        <a href="/news" class="btn btn-outline-dark">
+          <i class="fas fa-arrow-left"></i> <span data-i18n="article.back">Πίσω στα Νέα</span>
+        </a>
+      </div>
+    `;
+  }
+
+  function renderNotFound(lang) {
+    const t = lang === "en"
+      ? { title: "Article not found", msg: "The article you are looking for does not exist or has been removed.", back: "Back to News" }
+      : { title: "Το άρθρο δεν βρέθηκε", msg: "Το άρθρο που ψάχνετε δεν υπάρχει ή αφαιρέθηκε.", back: "Πίσω στα Νέα" };
+    container.innerHTML = `
+      <div class="article-notfound">
+        <i class="fas fa-exclamation-circle"></i>
+        <h1>${t.title}</h1>
+        <p>${t.msg}</p>
+        <a href="/news" class="btn btn-primary"><i class="fas fa-arrow-left"></i> ${t.back}</a>
+      </div>
+    `;
+  }
+
+  let cache = null;
+  const slug = getSlugFromURL();
+
+  async function load() {
+    if (!cache) {
+      try {
+        const res = await fetch("/content/data/news.json", { cache: "no-cache" });
+        const data = await res.json();
+        cache = data.articles || [];
+      } catch (err) {
+        console.error("Failed to load news.json:", err);
+        return;
+      }
+    }
+    const lang = document.documentElement.lang || "el";
+    const article = cache.find(a => a.slug === slug && a.published !== false);
+
+    if (article) {
+      updateMeta(article, lang);
+      render(article, lang);
+    } else {
+      renderNotFound(lang);
+    }
+  }
+
+  load();
+
+  // Re-render on language toggle
+  const obs = new MutationObserver(load);
+  obs.observe(document.documentElement, { attributes: true, attributeFilter: ["lang"] });
+})();
