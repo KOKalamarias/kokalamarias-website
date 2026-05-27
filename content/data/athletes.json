@@ -7,10 +7,26 @@
       "specialty_en": "50m Surface · 50m Apnea",
       "icon": "fa-bolt",
       "achievements": [
-        { "text_el": "Παγκόσμιο Ρεκόρ Νεανίδων (50μ επιφάνειας)", "text_en": "Youth World Record (50m surface)", "type": "world" },
-        { "text_el": "Ευρωπαϊκό Ρεκόρ (50μ άπνοιας)", "text_en": "European Record (50m apnea)", "type": "other" },
-        { "text_el": "Διπλό Πανελλήνιο Ρεκόρ — 17.81\"", "text_en": "Double Hellenic Record — 17.81\"", "type": "time" },
-        { "text_el": "Καλύτερη Αθλήτρια Πανελληνίου (901 βαθμοί CMAS)", "text_en": "Top Female Athlete, Hellenic Championship (901 CMAS pts)", "type": "other" }
+        {
+          "text_el": "Παγκόσμιο Ρεκόρ Νεανίδων (50μ επιφάνειας)",
+          "text_en": "Youth World Record (50m surface)",
+          "type": "world"
+        },
+        {
+          "text_el": "Ευρωπαϊκό Ρεκόρ (50μ άπνοιας)",
+          "text_en": "European Record (50m apnea)",
+          "type": "other"
+        },
+        {
+          "text_el": "Διπλό Πανελλήνιο Ρεκόρ — 17.81\"",
+          "text_en": "Double Hellenic Record — 17.81\"",
+          "type": "time"
+        },
+        {
+          "text_el": "Καλύτερη Αθλήτρια Πανελληνίου (901 βαθμοί CMAS)",
+          "text_en": "Top Female Athlete, Hellenic Championship (901 CMAS pts)",
+          "type": "other"
+        }
       ]
     },
     {
@@ -20,10 +36,26 @@
       "specialty_en": "800m & 1500m Surface · Open Water",
       "icon": "fa-fire",
       "achievements": [
-        { "text_el": "Παγκόσμια Πρωταθλήτρια (800μ — Κάιρο)", "text_en": "World Champion (800m — Cairo)", "type": "gold" },
-        { "text_el": "Ασημένιο Παγκοσμίου (1500μ — Βελιγράδι)", "text_en": "World Silver (1500m — Belgrade)", "type": "silver" },
-        { "text_el": "Διπλό Χρυσό Πανελληνίου Open Water (5χλμ Open & Νεανίδων)", "text_en": "Double Hellenic Open Water Gold (5km Open & Youth)", "type": "gold" },
-        { "text_el": "Πανελλήνιο Ρεκόρ — 13:36.09", "text_en": "Hellenic Record — 13:36.09", "type": "time" }
+        {
+          "text_el": "Παγκόσμια Πρωταθλήτρια (800μ — Κάιρο)",
+          "text_en": "World Champion (800m — Cairo)",
+          "type": "gold"
+        },
+        {
+          "text_el": "Ασημένιο Παγκοσμίου (1500μ — Βελιγράδι)",
+          "text_en": "World Silver (1500m — Belgrade)",
+          "type": "silver"
+        },
+        {
+          "text_el": "Διπλό Χρυσό Πανελληνίου Open Water (5χλμ Open & Νεανίδων)",
+          "text_en": "Double Hellenic Open Water Gold (5km Open & Youth)",
+          "type": "gold"
+        },
+        {
+          "text_el": "Πανελλήνιο Ρεκόρ — 13:36.09",
+          "text_en": "Hellenic Record — 13:36.09",
+          "type": "time"
+        }
       ]
     },
     {
@@ -33,9 +65,21 @@
       "specialty_en": "50m Surface · Relays",
       "icon": "fa-medal",
       "achievements": [
-        { "text_el": "Παγκόσμιος Πρωταθλητής (4x100 Νέων)", "text_en": "World Champion (4x100 Youth)", "type": "gold" },
-        { "text_el": "50μ Επιφάνειας — 16.39\"", "text_en": "50m Surface — 16.39\"", "type": "time" },
-        { "text_el": "Μέλος Εθνικής Ομάδας Νέων", "text_en": "Member of Youth National Team", "type": "flag" }
+        {
+          "text_el": "Παγκόσμιος Πρωταθλητής (4x100 Νέων)",
+          "text_en": "World Champion (4x100 Youth)",
+          "type": "gold"
+        },
+        {
+          "text_el": "50μ Επιφάνειας — 16.39\"",
+          "text_en": "50m Surface — 16.39\"",
+          "type": "time"
+        },
+        {
+          "text_el": "Μέλος Εθνικής Ομάδας Νέων",
+          "text_en": "Member of Youth National Team",
+          "type": "flag"
+        }
       ]
     },
     {
@@ -45,9 +89,21 @@
       "specialty_en": "1500m · Open Water",
       "icon": "fa-water",
       "achievements": [
-        { "text_el": "10ος στον κόσμο (1500μ Ανδρών — Βελιγράδι)", "text_en": "10th in the world (1500m Men — Belgrade)", "type": "world" },
-        { "text_el": "12:52.43 (1500μ επιφανείας)", "text_en": "12:52.43 (1500m surface)", "type": "time" },
-        { "text_el": "Εθνική Ομάδα Ανδρών", "text_en": "Men's National Team", "type": "flag" }
+        {
+          "text_el": "10ος στον κόσμο (1500μ Ανδρών — Βελιγράδι)",
+          "text_en": "10th in the world (1500m Men — Belgrade)",
+          "type": "world"
+        },
+        {
+          "text_el": "12:52.43 (1500μ επιφανείας)",
+          "text_en": "12:52.43 (1500m surface)",
+          "type": "time"
+        },
+        {
+          "text_el": "Εθνική Ομάδα Ανδρών",
+          "text_en": "Men's National Team",
+          "type": "flag"
+        }
       ]
     },
     {
@@ -55,11 +111,23 @@
       "name_en": "Apostolos Lampadaris",
       "specialty": "100μ & 200μ Επιφανείας",
       "specialty_en": "100m & 200m Surface",
-      "icon": "fa-running",
+      "icon": "images/uploads/λαμπαδαρης.jpeg",
       "achievements": [
-        { "text_el": "Όρια Ευρωπαϊκού (36.70\")", "text_en": "European qualifying time (36.70\")", "type": "flag" },
-        { "text_el": "Τελικοί Παγκοσμίου", "text_en": "World Championship finals", "type": "other" },
-        { "text_el": "Σταθερό μέλος σκυταλοδρομιών 4x200μ", "text_en": "Regular member of 4x200m relay", "type": "other" }
+        {
+          "text_el": "Όρια Ευρωπαϊκού (36.70\")",
+          "text_en": "European qualifying time (36.70\")",
+          "type": "flag"
+        },
+        {
+          "text_el": "Τελικοί Παγκοσμίου",
+          "text_en": "World Championship finals",
+          "type": "other"
+        },
+        {
+          "text_el": "Σταθερό μέλος σκυταλοδρομιών 4x200μ",
+          "text_en": "Regular member of 4x200m relay",
+          "type": "other"
+        }
       ]
     },
     {
@@ -69,10 +137,26 @@
       "specialty_en": "Relays · Surface",
       "icon": "fa-swimmer",
       "achievements": [
-        { "text_el": "Χρυσό Μεσογειακών Παράκτιων Αγώνων", "text_en": "Mediterranean Beach Games Gold", "type": "gold" },
-        { "text_el": "6ος στον κόσμο (4x100 Ανδρών — Βελιγράδι)", "text_en": "6th in the world (4x100 Men — Belgrade)", "type": "world" },
-        { "text_el": "Βασικό μέλος Εθνικής σκυταλοδρομίας", "text_en": "Key member of National relay", "type": "other" },
-        { "text_el": "Hall of Fame Κ.Ο. Καλαμαριάς", "text_en": "Kolymvitikos Omilos Kalamarias Hall of Fame", "type": "other" }
+        {
+          "text_el": "Χρυσό Μεσογειακών Παράκτιων Αγώνων",
+          "text_en": "Mediterranean Beach Games Gold",
+          "type": "gold"
+        },
+        {
+          "text_el": "6ος στον κόσμο (4x100 Ανδρών — Βελιγράδι)",
+          "text_en": "6th in the world (4x100 Men — Belgrade)",
+          "type": "world"
+        },
+        {
+          "text_el": "Βασικό μέλος Εθνικής σκυταλοδρομίας",
+          "text_en": "Key member of National relay",
+          "type": "other"
+        },
+        {
+          "text_el": "Hall of Fame Κ.Ο. Καλαμαριάς",
+          "text_en": "Kolymvitikos Omilos Kalamarias Hall of Fame",
+          "type": "other"
+        }
       ]
     },
     {
@@ -82,9 +166,21 @@
       "specialty_en": "Marathon / Open Water",
       "icon": "fa-water",
       "achievements": [
-        { "text_el": "Παγκόσμιο Χάλκινο (4x1000m Mixed)", "text_en": "World Bronze (4x1000m Mixed)", "type": "bronze" },
-        { "text_el": "Ειδικότητα ανοιχτής θάλασσας", "text_en": "Open water specialist", "type": "other" },
-        { "text_el": "Εθνική Ομάδα Open Water", "text_en": "Open Water National Team", "type": "flag" }
+        {
+          "text_el": "Παγκόσμιο Χάλκινο (4x1000m Mixed)",
+          "text_en": "World Bronze (4x1000m Mixed)",
+          "type": "bronze"
+        },
+        {
+          "text_el": "Ειδικότητα ανοιχτής θάλασσας",
+          "text_en": "Open water specialist",
+          "type": "other"
+        },
+        {
+          "text_el": "Εθνική Ομάδα Open Water",
+          "text_en": "Open Water National Team",
+          "type": "flag"
+        }
       ]
     },
     {
@@ -94,10 +190,26 @@
       "specialty_en": "Open Water · Long Distance",
       "icon": "fa-swimmer",
       "achievements": [
-        { "text_el": "Παγκόσμιος Πρωταθλητής 5.000μ Νέων (Viverone)", "text_en": "World Champion 5,000m Youth (Viverone)", "type": "gold" },
-        { "text_el": "Χρυσό 1.000μ & 150μ επιφανείας Νέων", "text_en": "Gold in 1,000m & 150m Surface Youth", "type": "gold" },
-        { "text_el": "47:44.53 (5.000μ επιφανείας)", "text_en": "47:44.53 (5,000m surface)", "type": "time" },
-        { "text_el": "Εθνική Ομάδα Open Water", "text_en": "Open Water National Team", "type": "flag" }
+        {
+          "text_el": "Παγκόσμιος Πρωταθλητής 5.000μ Νέων (Viverone)",
+          "text_en": "World Champion 5,000m Youth (Viverone)",
+          "type": "gold"
+        },
+        {
+          "text_el": "Χρυσό 1.000μ & 150μ επιφανείας Νέων",
+          "text_en": "Gold in 1,000m & 150m Surface Youth",
+          "type": "gold"
+        },
+        {
+          "text_el": "47:44.53 (5.000μ επιφανείας)",
+          "text_en": "47:44.53 (5,000m surface)",
+          "type": "time"
+        },
+        {
+          "text_el": "Εθνική Ομάδα Open Water",
+          "text_en": "Open Water National Team",
+          "type": "flag"
+        }
       ]
     },
     {
@@ -107,10 +219,26 @@
       "specialty_en": "Open Water · Long Distance",
       "icon": "fa-bolt",
       "achievements": [
-        { "text_el": "Παγκόσμιο Ασημένιο 5.000μ Ανδρών (Viverone)", "text_en": "World Silver 5,000m Men (Viverone)", "type": "silver" },
-        { "text_el": "Χρυσό Πανελληνίου Open Water 5χλμ Ανδρών (Θεσσαλονίκη)", "text_en": "Hellenic Open Water Gold 5km Men (Thessaloniki)", "type": "gold" },
-        { "text_el": "47:16.14 (5.000μ επιφανείας)", "text_en": "47:16.14 (5,000m surface)", "type": "time" },
-        { "text_el": "Εθνική Ομάδα Ανδρών Open Water", "text_en": "Men's Open Water National Team", "type": "flag" }
+        {
+          "text_el": "Παγκόσμιο Ασημένιο 5.000μ Ανδρών (Viverone)",
+          "text_en": "World Silver 5,000m Men (Viverone)",
+          "type": "silver"
+        },
+        {
+          "text_el": "Χρυσό Πανελληνίου Open Water 5χλμ Ανδρών (Θεσσαλονίκη)",
+          "text_en": "Hellenic Open Water Gold 5km Men (Thessaloniki)",
+          "type": "gold"
+        },
+        {
+          "text_el": "47:16.14 (5.000μ επιφανείας)",
+          "text_en": "47:16.14 (5,000m surface)",
+          "type": "time"
+        },
+        {
+          "text_el": "Εθνική Ομάδα Ανδρών Open Water",
+          "text_en": "Men's Open Water National Team",
+          "type": "flag"
+        }
       ]
     }
   ]
