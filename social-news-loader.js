@@ -46,14 +46,30 @@
     return article[field] || "";
   }
 
+  function pickWithLang(article, field, lang) {
+    const enKey = field + "_en";
+    if (lang === "en" && article[enKey]) return { text: article[enKey], untranslated: false };
+    return { text: article[field] || "", untranslated: lang === "en" };
+  }
+
+  function langWrap(html, untranslated, tag) {
+    tag = tag || "span";
+    if (!untranslated || !html) return html;
+    return `<${tag} lang="el">${html}</${tag}>`;
+  }
+
   function renderCard(article, lang) {
     const cat = CATEGORY_LABELS[article.category]
       ? CATEGORY_LABELS[article.category][lang] || CATEGORY_LABELS[article.category].el
       : article.category;
-    const title = pick(article, "title", lang);
-    const dateLabel = pick(article, "date_label", lang);
-    const summary = md(pick(article, "summary", lang));
-    const body = md(pick(article, "body", lang));
+    const titleR = pickWithLang(article, "title", lang);
+    const dateR = pickWithLang(article, "date_label", lang);
+    const summaryR = pickWithLang(article, "summary", lang);
+    const bodyR = pickWithLang(article, "body", lang);
+    const title = langWrap(titleR.text, titleR.untranslated);
+    const dateLabel = langWrap(dateR.text, dateR.untranslated);
+    const summary = langWrap(md(summaryR.text), summaryR.untranslated, "div");
+    const body = langWrap(md(bodyR.text), bodyR.untranslated, "div");
     const isFeatured = article.featured && article.image;
     const slug = article.slug || "";
     const articleURL = slug ? `/social/${slug}` : null;

@@ -1781,3 +1781,31 @@ html[lang="en"] .lang-only-el { display: none !important; }
   width: 120px;
   height: 120px;
 }
+
+/* ============================================
+   Translation notice on untranslated EN articles
+   ============================================ */
+.translate-notice {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background: linear-gradient(135deg, #fff8e1 0%, #ffecb3 100%);
+  border-left: 4px solid var(--yellow, #F4C842);
+  padding: 14px 18px;
+  border-radius: 8px;
+  margin: -10px -10px 24px;
+  font-size: 0.95rem;
+  color: #5a4500;
+  line-height: 1.5;
+}
+.translate-notice i {
+  font-size: 1.3rem;
+  color: var(--blue-900, #15366B);
+  margin-top: 1px;
+}
+.translate-notice a {
+  color: var(--blue-700, #1B95D4);
+  text-decoration: underline;
+  font-weight: 600;
+}
+.translate-notice a:hover { color: var(--blue-900, #15366B); }

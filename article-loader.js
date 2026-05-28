@@ -48,6 +48,18 @@
     return article[field] || "";
   }
 
+  function pickWithLang(article, field, lang) {
+    const enKey = field + "_en";
+    if (lang === "en" && article[enKey]) return { text: article[enKey], untranslated: false };
+    return { text: article[field] || "", untranslated: lang === "en" };
+  }
+
+  function langWrap(html, untranslated, tag) {
+    tag = tag || "span";
+    if (!untranslated || !html) return html;
+    return `<${tag} lang="el">${html}</${tag}>`;
+  }
+
   function getSlugFromURL() {
     // Path looks like "/news/5o-protathlima" or "/social/heart-swim"
     const path = window.location.pathname.replace(/\/+$/, "");
@@ -88,19 +100,35 @@
   }
 
   function render(article, lang) {
-    const title = pick(article, "title", lang);
-    const dateLabel = pick(article, "date_label", lang);
-    const summary = md(pick(article, "summary", lang));
-    const body = md(pick(article, "body", lang));
+    const titleR = pickWithLang(article, "title", lang);
+    const dateR = pickWithLang(article, "date_label", lang);
+    const summaryR = pickWithLang(article, "summary", lang);
+    const bodyR = pickWithLang(article, "body", lang);
+    const title = langWrap(titleR.text, titleR.untranslated);
+    const dateLabel = langWrap(dateR.text, dateR.untranslated);
+    const summary = langWrap(md(summaryR.text), summaryR.untranslated, "div");
+    const body = langWrap(md(bodyR.text), bodyR.untranslated, "div");
     const cat = CATEGORY_LABELS[article.category]
       ? CATEGORY_LABELS[article.category][lang] || CATEGORY_LABELS[article.category].el
       : article.category;
 
+    // Detect if article is missing English version (when page is in EN mode)
+    const missingEN = lang === "en" && (titleR.untranslated || summaryR.untranslated || bodyR.untranslated);
+    const translateURL = "https://translate.google.com/translate?sl=el&tl=en&u=" + encodeURIComponent(window.location.href);
+    const noticeBlock = missingEN
+      ? `<div class="translate-notice">
+           <i class="fas fa-language"></i>
+           <span>This article is only available in Greek. Your browser may offer automatic translation, or
+           <a href="${translateURL}" target="_blank" rel="noopener">view in Google Translate</a>.</span>
+         </div>`
+      : "";
+
     const imageBlock = article.image
-      ? `<div class="article-hero-photo"><img src="${article.image}" alt="${title}" /></div>`
+      ? `<div class="article-hero-photo"><img src="${article.image}" alt="${titleR.text}" /></div>`
       : "";
 
     container.innerHTML = `
+      ${noticeBlock}
       ${imageBlock}
       <div class="article-meta">
         <span class="news-category">${cat}</span>
