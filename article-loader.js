@@ -49,11 +49,22 @@
   }
 
   function getSlugFromURL() {
-    // Path looks like "/news/5o-protathlima" (no trailing slash) or "/news/5o-protathlima/"
+    // Path looks like "/news/5o-protathlima" or "/social/heart-swim"
     const path = window.location.pathname.replace(/\/+$/, "");
     const parts = path.split("/").filter(Boolean);
     return parts[1] || "";
   }
+
+  function getSectionFromURL() {
+    const path = window.location.pathname.replace(/\/+$/, "");
+    const parts = path.split("/").filter(Boolean);
+    return parts[0] || "news"; // "news" or "social"
+  }
+
+  const SECTION = getSectionFromURL();
+  const IS_SOCIAL = SECTION === "social";
+  const DATA_FILE = IS_SOCIAL ? "/content/data/social.json" : "/content/data/news.json";
+  const BACK_URL = IS_SOCIAL ? "/social" : "/news";
 
   function updateMeta(article, lang) {
     const title = pick(article, "title", lang);
@@ -99,23 +110,30 @@
       <div class="article-summary">${summary}</div>
       ${body ? `<div class="article-body">${body}</div>` : ""}
       <div class="article-footer">
-        <a href="/news" class="btn btn-outline-dark">
-          <i class="fas fa-arrow-left"></i> <span data-i18n="article.back">Πίσω στα Νέα</span>
+        <a href="${BACK_URL}" class="btn btn-outline-dark">
+          <i class="fas fa-arrow-left"></i> ${IS_SOCIAL ? (lang === "en" ? "Back to Social Actions" : "Πίσω στις Δράσεις") : (lang === "en" ? "Back to News" : "Πίσω στα Νέα")}
         </a>
       </div>
     `;
   }
 
   function renderNotFound(lang) {
-    const t = lang === "en"
-      ? { title: "Article not found", msg: "The article you are looking for does not exist or has been removed.", back: "Back to News" }
-      : { title: "Το άρθρο δεν βρέθηκε", msg: "Το άρθρο που ψάχνετε δεν υπάρχει ή αφαιρέθηκε.", back: "Πίσω στα Νέα" };
+    let t;
+    if (IS_SOCIAL) {
+      t = lang === "en"
+        ? { title: "Action not found", msg: "The action you are looking for does not exist or has been removed.", back: "Back to Social Actions" }
+        : { title: "Η δράση δεν βρέθηκε", msg: "Η δράση που ψάχνετε δεν υπάρχει ή αφαιρέθηκε.", back: "Πίσω στις Δράσεις" };
+    } else {
+      t = lang === "en"
+        ? { title: "Article not found", msg: "The article you are looking for does not exist or has been removed.", back: "Back to News" }
+        : { title: "Το άρθρο δεν βρέθηκε", msg: "Το άρθρο που ψάχνετε δεν υπάρχει ή αφαιρέθηκε.", back: "Πίσω στα Νέα" };
+    }
     container.innerHTML = `
       <div class="article-notfound">
         <i class="fas fa-exclamation-circle"></i>
         <h1>${t.title}</h1>
         <p>${t.msg}</p>
-        <a href="/news" class="btn btn-primary"><i class="fas fa-arrow-left"></i> ${t.back}</a>
+        <a href="${BACK_URL}" class="btn btn-primary"><i class="fas fa-arrow-left"></i> ${t.back}</a>
       </div>
     `;
   }
@@ -123,14 +141,29 @@
   let cache = null;
   const slug = getSlugFromURL();
 
+  // Set top back-link based on section
+  (function setBackLink() {
+    const link = document.getElementById("articleBackLink");
+    const label = document.getElementById("articleBackLabel");
+    if (link) link.setAttribute("href", BACK_URL);
+    if (label) {
+      const lang = document.documentElement.lang || "el";
+      if (IS_SOCIAL) {
+        label.textContent = lang === "en" ? "Back to Social Actions" : "Πίσω στις Δράσεις";
+      } else {
+        label.textContent = lang === "en" ? "Back to News" : "Πίσω στα Νέα";
+      }
+    }
+  })();
+
   async function load() {
     if (!cache) {
       try {
-        const res = await fetch("/content/data/news.json", { cache: "no-cache" });
+        const res = await fetch(DATA_FILE, { cache: "no-cache" });
         const data = await res.json();
         cache = data.articles || [];
       } catch (err) {
-        console.error("Failed to load news.json:", err);
+        console.error("Failed to load " + DATA_FILE + ":", err);
         return;
       }
     }

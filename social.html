@@ -62,6 +62,20 @@
     </div>
   </section>
 
+  <!-- Δράσεις (Άρθρα) — δυναμικά από content/data/social.json -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="social.actions_tag">Δράσεις μας</span>
+        <h2 data-i18n="social.actions_title">Πρόσφατες Κοινωνικές Δράσεις</h2>
+        <p data-i18n="social.actions_subtitle">Όλες οι ενέργειες κοινωνικής ευαισθητοποίησης του ομίλου</p>
+      </div>
+      <div class="news-grid" id="socialNewsGrid">
+        <!-- δυναμικά γεμίζει από social-news-loader.js -->
+      </div>
+    </div>
+  </section>
+
   <!-- WAVE DIVIDER → Footer transition -->
   <div class="wave-divider">
     <img src="images/06-wave-divider-1920x220.png" alt="" aria-hidden="true" />
@@ -72,5 +86,6 @@
   <script src="partials.js"></script>
   <script src="site-loader.js"></script>
   <script src="script.js"></script>
+  <script src="social-news-loader.js"></script>
 </body>
 </html>

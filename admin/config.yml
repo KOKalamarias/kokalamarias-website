@@ -69,6 +69,45 @@ collections:
               - { label: "Δημοσιευμένο", name: "published", widget: "boolean", default: true }
 
   # ====================================================
+  #  ΚΟΙΝΩΝΙΚΕΣ ΔΡΑΣΕΙΣ
+  # ====================================================
+  - name: "social"
+    label: "🤝 Κοινωνικές Δράσεις"
+    files:
+      - file: "content/data/social.json"
+        label: "Λίστα Δράσεων"
+        name: "social_list"
+        fields:
+          - label: "Δράσεις (οι νεότερες πρώτα)"
+            name: "articles"
+            widget: "list"
+            summary: "{{fields.title}} — {{fields.date}}"
+            fields:
+              - { label: "Τίτλος", name: "title", widget: "string" }
+              - { label: "Τίτλος (Αγγλικά)", name: "title_en", widget: "string", required: false }
+              - { label: "URL slug (μοναδική διεύθυνση δράσης)", name: "slug", widget: "string", required: false, hint: "Π.χ. '1o-kalamaria-heart-swim'. Θα γίνει: kokalamarias.gr/social/1o-kalamaria-heart-swim. Μόνο μικρά αγγλικά, αριθμοί, παύλες.", pattern: ["^[a-z0-9-]*$", "Μόνο μικρά αγγλικά, αριθμοί και παύλες"] }
+              - { label: "Ημερομηνία", name: "date", widget: "date" }
+              - { label: "Ετικέτα ημερομηνίας/τοποθεσίας", name: "date_label", widget: "string", required: false }
+              - { label: "Ετικέτα ημερομηνίας (Αγγλικά)", name: "date_label_en", widget: "string", required: false }
+              - label: "Κατηγορία"
+                name: "category"
+                widget: "select"
+                options:
+                  - { label: "Φιλανθρωπία / Heart Swim", value: "charity" }
+                  - { label: "Safe Water Sports", value: "safe-water" }
+                  - { label: "Σχολικές Επισκέψεις", value: "schools" }
+                  - { label: "Παραλιακές Δράσεις", value: "beach" }
+                  - { label: "Οικογένεια Κ.Ο.Κ.", value: "family" }
+                  - { label: "Άλλο", value: "other" }
+              - { label: "Κύρια φωτογραφία (προαιρετικό)", name: "image", widget: "image", required: false }
+              - { label: "Σύντομη περίληψη", name: "summary", widget: "text" }
+              - { label: "Σύντομη περίληψη (Αγγλικά)", name: "summary_en", widget: "text", required: false }
+              - { label: "Πλήρες κείμενο (markdown)", name: "body", widget: "text", required: false }
+              - { label: "Πλήρες κείμενο (Αγγλικά)", name: "body_en", widget: "text", required: false }
+              - { label: "Featured (μεγάλη κάρτα με φωτό)", name: "featured", widget: "boolean", default: false }
+              - { label: "Δημοσιευμένο", name: "published", widget: "boolean", default: true }
+
+  # ====================================================
   #  ΑΘΛΗΤΕΣ — Πρωταθλητές
   # ====================================================
   - name: "athletes"

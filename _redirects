@@ -2,5 +2,6 @@
 # Note: Cloudflare Pages auto-strips ".html", so we point to the bare path.
 
 /news/:slug       /article  200
+/social/:slug     /article  200
 /champions/:slug  /athlete  200
 /teams/:slug      /team     200

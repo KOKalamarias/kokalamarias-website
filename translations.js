@@ -183,6 +183,9 @@ const TRANSLATIONS = {
     "social.s3_p": "Ανοιχτές μέρες και επισκέψεις σχολείων της περιοχής στο Δημοτικό Κολυμβητήριο Καλαμαριάς, με ενημέρωση για την κολύμβηση και την τεχνική κολύμβηση.",
     "social.s4_title": "Οικογένεια Κ.Ο.Κ.",
     "social.s4_p": "Καλλιεργούμε «οικογενειακό κλίμα» — γονείς, αθλητές, προπονητές και Δ.Σ. λειτουργούν ως μία κοινότητα με κοινό όραμα και αλληλοϋποστήριξη.",
+    "social.actions_tag": "Δράσεις μας",
+    "social.actions_title": "Πρόσφατες Κοινωνικές Δράσεις",
+    "social.actions_subtitle": "Όλες οι ενέργειες κοινωνικής ευαισθητοποίησης του ομίλου",
 
     "news.tag": "Νέα & Ανακοινώσεις",
     "news.title": "Τελευταία Νέα",
@@ -426,6 +429,9 @@ const TRANSLATIONS = {
     "social.s3_p": "Open days and visits from local schools to Kalamaria Municipal Pool, with introductions to swimming and finswimming.",
     "social.s4_title": "K.O.K. Family",
     "social.s4_p": "We cultivate a “family atmosphere” — parents, athletes, coaches and the Board operate as a single community with a shared vision and mutual support.",
+    "social.actions_tag": "Our Initiatives",
+    "social.actions_title": "Recent Social Initiatives",
+    "social.actions_subtitle": "All community outreach actions of the club",
 
     "news.tag": "News & Announcements",
     "news.title": "Latest News",
