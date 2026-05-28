@@ -49,7 +49,8 @@
   function pickWithLang(article, field, lang) {
     const enKey = field + "_en";
     if (lang === "en" && article[enKey]) return { text: article[enKey], untranslated: false };
-    return { text: article[field] || "", untranslated: lang === "en" };
+    const elText = article[field] || "";
+    return { text: elText, untranslated: lang === "en" && elText.trim() !== "" };
   }
 
   function langWrap(html, untranslated, tag) {
