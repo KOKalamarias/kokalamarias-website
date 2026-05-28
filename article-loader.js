@@ -62,6 +62,39 @@
     return `<${tag} lang="el">${html}</${tag}>`;
   }
 
+  // Detect YouTube/Vimeo URLs and build responsive iframe embed
+  function videoEmbedHTML(url) {
+    if (!url) return "";
+    const trimmed = String(url).trim();
+    if (!trimmed) return "";
+
+    // YouTube: watch?v=, youtu.be/, shorts/, embed/
+    let m = trimmed.match(/(?:youtube\.com\/(?:watch\?(?:.*&)?v=|shorts\/|embed\/|v\/)|youtu\.be\/)([a-zA-Z0-9_-]{6,})/);
+    if (m) {
+      return `<div class="video-embed">
+        <iframe src="https://www.youtube.com/embed/${m[1]}"
+                title="YouTube video"
+                allowfullscreen
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                loading="lazy"></iframe>
+      </div>`;
+    }
+
+    // Vimeo: vimeo.com/12345 or vimeo.com/video/12345
+    m = trimmed.match(/vimeo\.com\/(?:video\/)?(\d+)/);
+    if (m) {
+      return `<div class="video-embed">
+        <iframe src="https://player.vimeo.com/video/${m[1]}"
+                title="Vimeo video"
+                allowfullscreen
+                allow="autoplay; fullscreen; picture-in-picture"
+                loading="lazy"></iframe>
+      </div>`;
+    }
+
+    return "";
+  }
+
   function getSlugFromURL() {
     // Path looks like "/news/5o-protathlima" or "/social/heart-swim"
     const path = window.location.pathname.replace(/\/+$/, "");
@@ -128,6 +161,7 @@
     const imageBlock = article.image
       ? `<div class="article-hero-photo"><img src="${article.image}" alt="${titleR.text}" /></div>`
       : "";
+    const videoBlock = videoEmbedHTML(article.video);
 
     container.innerHTML = `
       ${noticeBlock}
@@ -138,6 +172,7 @@
       </div>
       <h1 class="article-title">${title}</h1>
       <div class="article-summary">${summary}</div>
+      ${videoBlock}
       ${body ? `<div class="article-body">${body}</div>` : ""}
       <div class="article-footer">
         <a href="${BACK_URL}" class="btn btn-outline-dark">

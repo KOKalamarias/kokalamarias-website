@@ -68,6 +68,8 @@
     const cat = CATEGORY_LABELS[article.category]
       ? CATEGORY_LABELS[article.category][lang] || CATEGORY_LABELS[article.category].el
       : article.category;
+    const hasVideo = !!(article.video && String(article.video).trim());
+    const videoBadge = hasVideo ? `<span class="news-video-badge"><i class="fas fa-play"></i> Video</span>` : "";
     const titleR = pickWithLang(article, "title", lang);
     const dateR = pickWithLang(article, "date_label", lang);
     const summaryR = pickWithLang(article, "summary", lang);
@@ -94,7 +96,7 @@
       return `<article class="news-card featured-news has-photo">
         ${photoBlock}
         <div class="news-body">
-          <div class="news-category">${cat}</div>
+          <div class="news-category">${cat} ${videoBadge}</div>
           <div class="news-date"><i class="fas fa-calendar"></i> ${dateLabel}</div>
           ${titleBlock}
           ${summary}
@@ -108,7 +110,7 @@
       ? `<h3><a href="${articleURL}">${title}</a></h3>`
       : `<h3>${title}</h3>`;
     return `<article class="news-card">
-      <div class="news-category">${cat}</div>
+      <div class="news-category">${cat} ${videoBadge}</div>
       <div class="news-date"><i class="fas fa-calendar"></i> ${dateLabel}</div>
       ${titleBlock}
       ${summary}
