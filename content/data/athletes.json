@@ -169,8 +169,8 @@
     {
       "name": "Ιωάννης Αργυρόπουλος",
       "name_en": "Ioannis Argyropoulos",
-      "specialty": "Μαραθώνια / Open Water",
-      "specialty_en": "Marathon / Open Water",
+      "specialty": " Open Water",
+      "specialty_en": " Open Water",
       "icon": "fa-water",
       "achievements": [
         {
@@ -189,13 +189,14 @@
           "type": "flag"
         }
       ],
-      "slug": "ioannis-argyropoulos"
+      "slug": "ioannis-argyropoulos",
+      "photo": "/images/uploads/εικόνα_viber_2025-09-12_15-48-25-673-1-.jpg"
     },
     {
       "name": "Ηλίας Καλφίδης",
       "name_en": "Ilias Kalfidis",
-      "specialty": "Open Water · Μεγάλες Αποστάσεις",
-      "specialty_en": "Open Water · Long Distance",
+      "specialty": "Open Water · 400μ Επιφανείας",
+      "specialty_en": "Open Water · 400m Sufrace",
       "icon": "fa-swimmer",
       "achievements": [
         {
@@ -219,7 +220,8 @@
           "type": "flag"
         }
       ],
-      "slug": "ilias-kalfidis"
+      "slug": "ilias-kalfidis",
+      "photo": "/images/uploads/527914266_18046509746634959_3551052245012260557_n-1-.jpg"
     },
     {
       "name": "Μάριος Αρμουτσής",
