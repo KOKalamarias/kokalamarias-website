@@ -384,6 +384,27 @@
           "type": "flag"
         }
       ]
+    },
+    {
+      "icon": " fa-bolt",
+      "name": "Ακριτίδου Δήμητρα",
+      "name_en": "Akritidou Dimitra",
+      "slug": "akritidou-dimitra",
+      "photo": "/images/uploads/87992472_2828450367230809_6723822970344570880_n_edited.jpg",
+      "specialty": "200μ Επιφανείας - 400μ Επιφανειας",
+      "specialty_en": "200m Surface - 400m Surface",
+      "achievements": [
+        {
+          "text_el": "Ασημένιο Μετάλλιο",
+          "text_en": "Silver Medal",
+          "type": "silver"
+        },
+        {
+          "text_el": "Εθνική Ομάδα Νέων - Νεανίδων",
+          "text_en": "Youth National Team",
+          "type": "flag"
+        }
+      ]
     }
   ]
 }
