@@ -3,7 +3,7 @@
     {
       "name": "Ιφιγένεια Τελιούση",
       "name_en": "Ifigeneia Teliousi",
-      "specialty": "50μ Επιφανείας · 50μ Άπνοιας",
+      "specialty": "50μ Επιφανείας · 50μ Άπνοιας ",
       "specialty_en": "50m Surface · 50m Apnea",
       "icon": "fa-bolt",
       "achievements": [
@@ -13,8 +13,8 @@
           "type": "world"
         },
         {
-          "text_el": "Ευρωπαϊκό Ρεκόρ (50μ άπνοιας)",
-          "text_en": "European Record (50m apnea)",
+          "text_el": "Ευρωπαϊκό Ρεκόρ Νεανίδων (50μ άπνοιας)",
+          "text_en": "Youth European Record (50m apnea)",
           "type": "other"
         },
         {
@@ -28,7 +28,8 @@
           "type": "other"
         }
       ],
-      "slug": "ifigeneia-teliousi"
+      "slug": "ifigeneia-teliousi",
+      "photo": "/images/uploads/εικόνα_viber_2025-01-25_13-44-46-057-1-.jpg"
     },
     {
       "name": "Ελένη Καλφίδου",
@@ -58,13 +59,14 @@
           "type": "time"
         }
       ],
-      "slug": "eleni-kalfidou"
+      "slug": "eleni-kalfidou",
+      "photo": "/images/uploads/εικόνα_viber_2025-01-18_11-11-17-039.jpg"
     },
     {
       "name": "Βασίλης Λογοθέτης",
       "name_en": "Vasilis Logothetis",
-      "specialty": "50μ Επιφανείας · Σκυτάλες",
-      "specialty_en": "50m Surface · Relays",
+      "specialty": "50μ Επιφανείας · 50μ 'Απνοια",
+      "specialty_en": "50m Surface · 50m Apnea",
       "icon": "fa-medal",
       "achievements": [
         {
@@ -83,7 +85,8 @@
           "type": "flag"
         }
       ],
-      "slug": "vasilis-logothetis"
+      "slug": "vasilis-logothetis",
+      "photo": "/images/uploads/img9190-c23a2.jpeg"
     },
     {
       "name": "Ευάγγελος Σ. Νικολαΐδης",
@@ -108,7 +111,8 @@
           "type": "flag"
         }
       ],
-      "slug": "evangelos-nikolaidis"
+      "slug": "evangelos-nikolaidis",
+      "photo": "/images/uploads/εικόνα_viber_2025-01-18_11-11-16-799-1-.jpg"
     },
     {
       "name": "Απόστολος Λαμπαδάρης",
@@ -133,12 +137,13 @@
           "type": "other"
         }
       ],
-      "slug": "apostolos-lampadaris"
+      "slug": "apostolos-lampadaris",
+      "photo": "/images/uploads/λαμπαδαρης.jpeg"
     },
     {
       "name": "Γιώργος Παναγιωτίδης",
       "name_en": "Giorgos Panagiotidis",
-      "specialty": "Σκυτάλες · Επιφανείας",
+      "specialty": "50m Surface · 50m Apnea",
       "specialty_en": "Relays · Surface",
       "icon": "fa-swimmer",
       "achievements": [
@@ -156,14 +161,10 @@
           "text_el": "Βασικό μέλος Εθνικής σκυταλοδρομίας",
           "text_en": "Key member of National relay",
           "type": "other"
-        },
-        {
-          "text_el": "Hall of Fame Κ.Ο. Καλαμαριάς",
-          "text_en": "Kolymvitikos Omilos Kalamarias Hall of Fame",
-          "type": "other"
         }
       ],
-      "slug": "giorgos-panagiotidis"
+      "slug": "giorgos-panagiotidis",
+      "photo": "/images/uploads/εικόνα_viber_2025-01-18_11-11-18-610_edited.jpg"
     },
     {
       "name": "Ιωάννης Αργυρόπουλος",
@@ -248,7 +249,17 @@
           "type": "flag"
         }
       ],
-      "slug": "marios-armoutsis"
+      "slug": "marios-armoutsis",
+      "photo": "/images/uploads/εικόνα_viber_2025-09-12_15-48-26-007-1-.jpg"
+    },
+    {
+      "icon": "fa-medal",
+      "name": "Μάγδα Νικολαΐδου",
+      "specialty": "Open Water · Μεγάλες Αποστάσεις",
+      "name_en": "Magda Nikolaidou",
+      "slug": "magda-nikolaidou",
+      "photo": "/images/uploads/528282653_18046509764634959_2556772852929037013_n-1-.jpg",
+      "specialty_en": "Open Water · Long Distance"
     }
   ]
 }
