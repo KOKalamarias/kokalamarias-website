@@ -321,6 +321,27 @@
           "type": "other"
         }
       ]
+    },
+    {
+      "icon": "fa-medal",
+      "name": "Μητακίδη Δανάη",
+      "name_en": "Mitakidi Danai",
+      "slug": "mitakidi-danai",
+      "photo": "/images/uploads/274014244_433038181951524_8271995396765530215_n-1-.jpg",
+      "specialty": "Open Water",
+      "specialty_en": "Open Water",
+      "achievements": [
+        {
+          "text_el": "Ασημένιο μετάλλιο Open Water",
+          "text_en": "Silver Medal Open Water",
+          "type": "silver"
+        },
+        {
+          "text_el": "Εθνική Ομάδα Open Water",
+          "text_en": "Open Water National Team",
+          "type": "flag"
+        }
+      ]
     }
   ]
 }
