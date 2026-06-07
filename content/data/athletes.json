@@ -426,6 +426,27 @@
           "text_en": "Youth National Team"
         }
       ]
+    },
+    {
+      "icon": "fa-medal",
+      "name": "Κώστας Γουλτίδης ",
+      "name_en": "Kostas Goultidis",
+      "slug": "kostas-goultidis",
+      "photo": "/images/uploads/465213618_10225707566308106_3102979505475967415_n-1-.jpg",
+      "specialty": "200μ Επιφανείας - 400μ Επιφανειας",
+      "specialty_en": "200m Surface - 400m Surface",
+      "achievements": [
+        {
+          "text_el": "Ασημένιο Μετάλλιο",
+          "text_en": "Silver Medal",
+          "type": "silver"
+        },
+        {
+          "text_el": "Εθνική Ομάδα Νέων - Νεανίδων",
+          "text_en": "Youth National Team",
+          "type": "flag"
+        }
+      ]
     }
   ]
 }
