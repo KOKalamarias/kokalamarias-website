@@ -342,6 +342,27 @@
           "type": "flag"
         }
       ]
+    },
+    {
+      "icon": "fa-medal",
+      "name": "Πολίτου Αναστασία",
+      "name_en": "Politou Anastasia",
+      "slug": "politou-anastasia",
+      "photo": "/images/uploads/465103643_8677959118946542_6366767230415692159_n_edited.jpg",
+      "specialty": "Open Water",
+      "specialty_en": "Open Water",
+      "achievements": [
+        {
+          "text_el": "Ασημένιο μετάλλιο Open Water",
+          "text_en": "Silver Medal Open Water",
+          "type": "silver"
+        },
+        {
+          "text_el": "Εθνική Ομάδα Open Water",
+          "text_en": "Open Water National Team",
+          "type": "flag"
+        }
+      ]
     }
   ]
 }
