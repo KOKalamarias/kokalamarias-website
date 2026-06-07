@@ -314,6 +314,11 @@
           "text_el": "Ασημένιο Μετάλλιο 1500μ Επιφανειας",
           "text_en": "Silver Medal 1500m Surface",
           "type": "silver"
+        },
+        {
+          "text_el": "Ειδικότητα Open Water",
+          "text_en": "Open Water Specialist",
+          "type": "other"
         }
       ]
     }
