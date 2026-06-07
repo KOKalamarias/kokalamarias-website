@@ -261,7 +261,40 @@
       "name_en": "Magda Nikolaidou",
       "slug": "magda-nikolaidou",
       "photo": "/images/uploads/528282653_18046509764634959_2556772852929037013_n-1-.jpg",
-      "specialty_en": "Open Water · Long Distance"
+      "specialty_en": "Open Water · Long Distance",
+      "achievements": [
+        {
+          "text_el": "Ειδικότητα ανοιχτής θάλασσας",
+          "text_en": "Open water specialist",
+          "type": "other"
+        },
+        {
+          "text_el": "Εθνική Ομάδα Open Water",
+          "text_en": "National Team Open Water",
+          "type": "flag"
+        }
+      ]
+    },
+    {
+      "icon": "fa-medal",
+      "name": "Μπουσδούκη Αφροδίτη",
+      "name_en": "Bousdouki Afroditi",
+      "slug": "bousdouki-afroditi",
+      "photo": "/images/uploads/εικόνα_viber_2025-01-18_11-11-18-378-1-.jpg",
+      "specialty": " Open Water",
+      "specialty_en": " Open Water",
+      "achievements": [
+        {
+          "text_el": "Ειδικότητα Open Water",
+          "text_en": " Open Water Specialist",
+          "type": "other"
+        },
+        {
+          "text_el": "Εθνική Ομάδα Open Water",
+          "text_en": "Open Water National Team",
+          "type": "flag"
+        }
+      ]
     }
   ]
 }
