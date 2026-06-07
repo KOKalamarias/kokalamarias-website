@@ -1,20 +1,20 @@
 {
   "articles": [
     {
-      "title": "1ο Kalamaria Heart Swim",
-      "title_en": "1st Kalamaria Heart Swim",
-      "slug": "1o-kalamaria-heart-swim",
-      "date": "2026-05-17",
+      "body": "Μέσα από μαραθώνια κολύμβηση και δράσεις για όλες τις ηλικίες, αθλητές, εθελοντές, χορηγοί και πλήθος κόσμου έγιναν μια μεγάλη αγκαλιά για τα παιδιά που το έχουν ανάγκη. Η αθρόα συμμετοχή απέδειξε έμπρακτα πως ο αθλητισμός αποτελεί κινητήριο δύναμη αλληλεγγύης και αγάπης, υπενθυμίζοντας σε όλους μας πως **«όταν είμαστε μαζί, μπορούμε περισσότερα»**.\n\nΈνα μεγάλο ευχαριστώ από καρδιάς σε όσους στήριξαν αυτή την προσπάθεια. Ανανεώνουμε το ραντεβού μας για την επόμενη δράση!",
+      "summary_en": "On Sunday, May 17, our Club successfully organized the **1st Kalamaria Heart Swim** at the Kalamaria Municipal Pool. A charity event co-organized with the «Children's Hearts» Association, to support children with cardiac conditions.",
       "date_label": "Δημοτικό Κολυμβητήριο · Μάιος 2026",
       "date_label_en": "Municipal Pool · May 2026",
-      "category": "charity",
-      "image": "",
-      "summary": "Με επιτυχία και συγκίνηση ολοκληρώθηκε την Κυριακή 17 Μαΐου από τον Όμιλό μας, το **1ο Kalamaria Heart Swim** στο Δημοτικό Κολυμβητήριο Καλαμαριάς. Φιλανθρωπική εκδήλωση σε συνδιοργάνωση με τον Σύλλογο «Παιδικές Καρδιές», για τη στήριξη παιδιών με καρδιολογικά προβλήματα.",
-      "summary_en": "On Sunday, May 17, our Club successfully organized the **1st Kalamaria Heart Swim** at the Kalamaria Municipal Pool. A charity event co-organized with the «Children's Hearts» Association, to support children with cardiac conditions.",
-      "body": "Μέσα από μαραθώνια κολύμβηση και δράσεις για όλες τις ηλικίες, αθλητές, εθελοντές, χορηγοί και πλήθος κόσμου έγιναν μια μεγάλη αγκαλιά για τα παιδιά που το έχουν ανάγκη. Η αθρόα συμμετοχή απέδειξε έμπρακτα πως ο αθλητισμός αποτελεί κινητήριο δύναμη αλληλεγγύης και αγάπης, υπενθυμίζοντας σε όλους μας πως **«όταν είμαστε μαζί, μπορούμε περισσότερα»**.\n\nΈνα μεγάλο ευχαριστώ από καρδιάς σε όσους στήριξαν αυτή την προσπάθεια. Ανανεώνουμε το ραντεβού μας για την επόμενη δράση!",
       "body_en": "Through marathon swimming and activities for all ages, athletes, volunteers, sponsors and a large crowd came together to embrace the children in need. The massive turnout proved that sport is a driving force of solidarity and love, reminding us that **«when we are together, we can do more»**.\n\nA heartfelt thank you to everyone who supported this effort. We look forward to our next initiative!",
+      "summary": "Με επιτυχία και συγκίνηση ολοκληρώθηκε την Κυριακή 17 Μαΐου από τον Όμιλό μας, το **1ο Kalamaria Heart Swim** στο Δημοτικό Κολυμβητήριο Καλαμαριάς. Φιλανθρωπική εκδήλωση σε συνδιοργάνωση με τον Σύλλογο «Παιδικές Καρδιές», για τη στήριξη παιδιών με καρδιολογικά προβλήματα.",
+      "slug": "1o-kalamaria-heart-swim",
       "featured": true,
-      "published": true
+      "published": true,
+      "date": "2026-05-17",
+      "title_en": "1st Kalamaria Heart Swim",
+      "title": "1ο Kalamaria Heart Swim",
+      "image": "/images/uploads/674458023_18077443913634959_4738743939911804035_n.jpg",
+      "category": "charity"
     }
   ]
 }
