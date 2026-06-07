@@ -447,6 +447,32 @@
           "type": "flag"
         }
       ]
+    },
+    {
+      "icon": "fa-medal",
+      "name": "Iωάννα Παναγιωτίδου ",
+      "name_en": "Ioanna Panagiotidou",
+      "slug": "ioanna-panagiotidou",
+      "photo": "/images/uploads/37618150_1822611684481354_3298470729401499648_n_edited.jpg",
+      "specialty": "200m Surface - 400m Surface",
+      "specialty_en": "200m Surface - 400m Surface",
+      "achievements": [
+        {
+          "text_el": "Παγκόσμιο Ρεκόρ 400μ. Επιφανείας Νεανίδων",
+          "text_en": "Youth Word Record 400m Surface",
+          "type": "world"
+        },
+        {
+          "text_el": "Ασημένιο Μετάλλιο",
+          "text_en": "Silver Medal",
+          "type": "silver"
+        },
+        {
+          "text_el": "Εθνική Ομάδα Νέων - Νεανίδων",
+          "text_en": "Youth National Team",
+          "type": "flag"
+        }
+      ]
     }
   ]
 }
