@@ -363,6 +363,27 @@
           "type": "flag"
         }
       ]
+    },
+    {
+      "icon": "fa-medal",
+      "name": "Κωνσταντινίδου Στέλλα",
+      "name_en": "Konstantinidou Stella",
+      "slug": "konstantinidou-stella",
+      "photo": "/images/uploads/465057136_8455231991193301_874938764078273767_n_edited.jpg",
+      "specialty": "Open Water",
+      "specialty_en": "Open Water",
+      "achievements": [
+        {
+          "text_el": "Ειδικότητα Open Water",
+          "text_en": "Open Water Specialist",
+          "type": "other"
+        },
+        {
+          "text_el": "Εθνική Ομάδα Open Water",
+          "text_en": "Open Water National Team",
+          "type": "flag"
+        }
+      ]
     }
   ]
 }
