@@ -295,6 +295,27 @@
           "type": "flag"
         }
       ]
+    },
+    {
+      "icon": "fa-medal",
+      "name": "Κουτουρουσίου Ζωή",
+      "name_en": "Koutourousiou Zoi",
+      "slug": "koutourousiou-zoi",
+      "photo": "/images/uploads/290149147_520564249865583_552873351748515314_n_edited.jpg",
+      "specialty": "1500μ Επιφανειας - Open Water",
+      "specialty_en": "1500m Surface - Open Water",
+      "achievements": [
+        {
+          "text_el": "Χρυσό μετάλλιο Open Water",
+          "text_en": "Gold medal Open Water",
+          "type": "gold"
+        },
+        {
+          "text_el": "Ασημένιο Μετάλλιο 1500μ Επιφανειας",
+          "text_en": "Silver Medal 1500m Surface",
+          "type": "silver"
+        }
+      ]
     }
   ]
 }
