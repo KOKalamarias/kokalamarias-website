@@ -353,6 +353,11 @@
       "specialty_en": "Open Water",
       "achievements": [
         {
+          "text_el": "Χρυσό μετάλλιο Open Water",
+          "text_en": "Gold Medal Open Water",
+          "type": "gold"
+        },
+        {
           "text_el": "Ασημένιο μετάλλιο Open Water",
           "text_en": "Silver Medal Open Water",
           "type": "silver"
