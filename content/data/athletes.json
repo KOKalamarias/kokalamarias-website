@@ -277,8 +277,8 @@
     },
     {
       "icon": "fa-medal",
-      "name": "Μπουσδούκη Αφροδίτη",
-      "name_en": "Bousdouki Afroditi",
+      "name": "Αφροδίτη Μπουσδούκη ",
+      "name_en": "Afroditi Bousdouki ",
       "slug": "bousdouki-afroditi",
       "photo": "/images/uploads/εικόνα_viber_2025-01-18_11-11-18-378-1-.jpg",
       "specialty": " Open Water",
@@ -298,8 +298,8 @@
     },
     {
       "icon": "fa-medal",
-      "name": "Κουτουρουσίου Ζωή",
-      "name_en": "Koutourousiou Zoi",
+      "name": "Ζωή Κουτουρουσίου ",
+      "name_en": "Zoi Koutourousiou ",
       "slug": "koutourousiou-zoi",
       "photo": "/images/uploads/290149147_520564249865583_552873351748515314_n_edited.jpg",
       "specialty": "1500μ Επιφανειας - Open Water",
@@ -324,8 +324,8 @@
     },
     {
       "icon": "fa-medal",
-      "name": "Μητακίδη Δανάη",
-      "name_en": "Mitakidi Danai",
+      "name": "Δανάη Μητακίδη ",
+      "name_en": "Danai Mitakidi ",
       "slug": "mitakidi-danai",
       "photo": "/images/uploads/274014244_433038181951524_8271995396765530215_n-1-.jpg",
       "specialty": "Open Water",
@@ -345,8 +345,8 @@
     },
     {
       "icon": "fa-medal",
-      "name": "Πολίτου Αναστασία",
-      "name_en": "Politou Anastasia",
+      "name": "Αναστασία Πολίτου ",
+      "name_en": "Anastasia Politou ",
       "slug": "politou-anastasia",
       "photo": "/images/uploads/465103643_8677959118946542_6366767230415692159_n_edited.jpg",
       "specialty": "Open Water",
@@ -366,8 +366,8 @@
     },
     {
       "icon": "fa-medal",
-      "name": "Κωνσταντινίδου Στέλλα",
-      "name_en": "Konstantinidou Stella",
+      "name": "Στέλλα Κωνσταντινίδου ",
+      "name_en": "Stella Konstantinidou ",
       "slug": "konstantinidou-stella",
       "photo": "/images/uploads/465057136_8455231991193301_874938764078273767_n_edited.jpg",
       "specialty": "Open Water",
@@ -387,8 +387,8 @@
     },
     {
       "icon": " fa-bolt",
-      "name": "Ακριτίδου Δήμητρα",
-      "name_en": "Akritidou Dimitra",
+      "name": "Δήμητρα Ακριτίδου ",
+      "name_en": "Dimitra Akritidou ",
       "slug": "akritidou-dimitra",
       "photo": "/images/uploads/87992472_2828450367230809_6723822970344570880_n_edited.jpg",
       "specialty": "200μ Επιφανείας - 400μ Επιφανειας",
@@ -403,6 +403,27 @@
           "text_el": "Εθνική Ομάδα Νέων - Νεανίδων",
           "text_en": "Youth National Team",
           "type": "flag"
+        }
+      ]
+    },
+    {
+      "icon": "fa-medal",
+      "name": "Έρη Πουλοπούλου ",
+      "name_en": "Eri Poulopoulou",
+      "slug": "eri-poulopoulou",
+      "photo": "/images/uploads/452146719_2223009711368828_6448847743872116021_n_edited.png",
+      "specialty": "200μ Επιφανείας - 400μ Επιφανειας",
+      "specialty_en": "200m Surface - 400m Surface",
+      "achievements": [
+        {
+          "text_el": "Ασημένιο Μετάλλιο",
+          "text_en": "Silver Medal",
+          "type": "silver"
+        },
+        {
+          "type": "flag",
+          "text_el": "Εθνική Ομάδα Νέων - Νεανίδων",
+          "text_en": "Youth National Team"
         }
       ]
     }
