@@ -1,35 +1,98 @@
 {
   "items": [
     {
-      "name": "Ιφιγένεια Τελιούση",
-      "name_en": "Ifigeneia Teliousi",
-      "specialty": "50μ Επιφανείας · 50μ Άπνοιας ",
-      "specialty_en": "50m Surface · 50m Apnea",
-      "icon": "fa-bolt",
+      "icon": "fa-medal",
+      "name": "Μάγδα Νικολαΐδου",
+      "specialty": "Open Water · Μεγάλες Αποστάσεις",
+      "name_en": "Magda Nikolaidou",
+      "slug": "magda-nikolaidou",
+      "photo": "/images/uploads/528282653_18046509764634959_2556772852929037013_n-1-.jpg",
+      "specialty_en": "Open Water · Long Distance",
       "achievements": [
         {
-          "text_el": "Παγκόσμιο Ρεκόρ Νεανίδων (50μ επιφάνειας)",
-          "text_en": "Youth World Record (50m surface)",
-          "type": "world"
-        },
-        {
-          "text_el": "Ευρωπαϊκό Ρεκόρ Νεανίδων (50μ άπνοιας)",
-          "text_en": "Youth European Record (50m apnea)",
+          "text_el": "Ειδικότητα ανοιχτής θάλασσας",
+          "text_en": "Open water specialist",
           "type": "other"
         },
         {
-          "text_el": "Διπλό Πανελλήνιο Ρεκόρ — 17.81\"",
-          "text_en": "Double Hellenic Record — 17.81\"",
+          "text_el": "Εθνική Ομάδα Open Water",
+          "text_en": "National Team Open Water",
+          "type": "flag"
+        }
+      ]
+    },
+    {
+      "name": "Ιωάννης Αργυρόπουλος",
+      "name_en": "Ioannis Argyropoulos",
+      "specialty": " Open Water",
+      "specialty_en": " Open Water",
+      "icon": "fa-water",
+      "achievements": [
+        {
+          "text_el": "Παγκόσμιο Χάλκινο (4x1000m Mixed)",
+          "text_en": "World Bronze (4x1000m Mixed)",
+          "type": "bronze"
+        },
+        {
+          "text_el": "Ειδικότητα ανοιχτής θάλασσας",
+          "text_en": "Open water specialist",
+          "type": "other"
+        },
+        {
+          "text_el": "Εθνική Ομάδα Open Water",
+          "text_en": "Open Water National Team",
+          "type": "flag"
+        }
+      ],
+      "slug": "ioannis-argyropoulos",
+      "photo": "/images/uploads/εικόνα_viber_2025-09-12_15-48-25-673-1-.jpg"
+    },
+    {
+      "name": "Βασίλης Λογοθέτης",
+      "name_en": "Vasilis Logothetis",
+      "specialty": "50μ Επιφανείας · 50μ 'Απνοια",
+      "specialty_en": "50m Surface · 50m Apnea",
+      "icon": "fa-medal",
+      "achievements": [
+        {
+          "text_el": "Παγκόσμιος Πρωταθλητής (4x100 Νέων)",
+          "text_en": "World Champion (4x100 Youth)",
+          "type": "gold"
+        },
+        {
+          "text_el": "50μ Επιφάνειας — 16.39\"",
+          "text_en": "50m Surface — 16.39\"",
           "type": "time"
         },
         {
-          "text_el": "Καλύτερη Αθλήτρια Πανελληνίου (901 βαθμοί CMAS)",
-          "text_en": "Top Female Athlete, Hellenic Championship (901 CMAS pts)",
-          "type": "other"
+          "text_el": "Μέλος Εθνικής Ομάδας Νέων",
+          "text_en": "Member of Youth National Team",
+          "type": "flag"
         }
       ],
-      "slug": "ifigeneia-teliousi",
-      "photo": "/images/uploads/εικόνα_viber_2025-01-25_13-44-46-057-1-.jpg"
+      "slug": "vasilis-logothetis",
+      "photo": "/images/uploads/img9190-c23a2.jpeg"
+    },
+    {
+      "icon": "fa-medal",
+      "name": "Αφροδίτη Μπουσδούκη ",
+      "name_en": "Afroditi Bousdouki ",
+      "slug": "bousdouki-afroditi",
+      "photo": "/images/uploads/εικόνα_viber_2025-01-18_11-11-18-378-1-.jpg",
+      "specialty": " Open Water",
+      "specialty_en": " Open Water",
+      "achievements": [
+        {
+          "text_el": "Ειδικότητα Open Water",
+          "text_en": " Open Water Specialist",
+          "type": "other"
+        },
+        {
+          "text_el": "Εθνική Ομάδα Open Water",
+          "text_en": "Open Water National Team",
+          "type": "flag"
+        }
+      ]
     },
     {
       "name": "Ελένη Καλφίδου",
@@ -63,82 +126,35 @@
       "photo": "/images/uploads/εικόνα_viber_2025-01-18_11-11-17-039.jpg"
     },
     {
-      "name": "Βασίλης Λογοθέτης",
-      "name_en": "Vasilis Logothetis",
-      "specialty": "50μ Επιφανείας · 50μ 'Απνοια",
+      "name": "Ιφιγένεια Τελιούση",
+      "name_en": "Ifigeneia Teliousi",
+      "specialty": "50μ Επιφανείας · 50μ Άπνοιας ",
       "specialty_en": "50m Surface · 50m Apnea",
-      "icon": "fa-medal",
+      "icon": "fa-bolt",
       "achievements": [
         {
-          "text_el": "Παγκόσμιος Πρωταθλητής (4x100 Νέων)",
-          "text_en": "World Champion (4x100 Youth)",
-          "type": "gold"
-        },
-        {
-          "text_el": "50μ Επιφάνειας — 16.39\"",
-          "text_en": "50m Surface — 16.39\"",
-          "type": "time"
-        },
-        {
-          "text_el": "Μέλος Εθνικής Ομάδας Νέων",
-          "text_en": "Member of Youth National Team",
-          "type": "flag"
-        }
-      ],
-      "slug": "vasilis-logothetis",
-      "photo": "/images/uploads/img9190-c23a2.jpeg"
-    },
-    {
-      "name": "Ευάγγελος Σ. Νικολαΐδης",
-      "name_en": "Evangelos S. Nikolaidis",
-      "specialty": "1500μ · Open Water",
-      "specialty_en": "1500m · Open Water",
-      "icon": "fa-water",
-      "achievements": [
-        {
-          "text_el": "10ος στον κόσμο (1500μ Ανδρών — Βελιγράδι)",
-          "text_en": "10th in the world (1500m Men — Belgrade)",
+          "text_el": "Παγκόσμιο Ρεκόρ Νεανίδων (50μ επιφάνειας)",
+          "text_en": "Youth World Record (50m surface)",
           "type": "world"
         },
         {
-          "text_el": "12:52.43 (1500μ επιφανείας)",
-          "text_en": "12:52.43 (1500m surface)",
+          "text_el": "Ευρωπαϊκό Ρεκόρ Νεανίδων (50μ άπνοιας)",
+          "text_en": "Youth European Record (50m apnea)",
+          "type": "other"
+        },
+        {
+          "text_el": "Διπλό Πανελλήνιο Ρεκόρ — 17.81\"",
+          "text_en": "Double Hellenic Record — 17.81\"",
           "type": "time"
         },
         {
-          "text_el": "Εθνική Ομάδα Ανδρών",
-          "text_en": "Men's National Team",
-          "type": "flag"
-        }
-      ],
-      "slug": "evangelos-nikolaidis",
-      "photo": "/images/uploads/εικόνα_viber_2025-01-18_11-11-16-799-1-.jpg"
-    },
-    {
-      "name": "Απόστολος Λαμπαδάρης",
-      "name_en": "Apostolos Lampadaris",
-      "specialty": "100μ & 200μ Επιφανείας",
-      "specialty_en": "100m & 200m Surface",
-      "icon": "fa-water",
-      "achievements": [
-        {
-          "text_el": "Όρια Ευρωπαϊκού (36.70\")",
-          "text_en": "European qualifying time (36.70\")",
-          "type": "flag"
-        },
-        {
-          "text_el": "Τελικοί Παγκοσμίου",
-          "text_en": "World Championship finals",
-          "type": "other"
-        },
-        {
-          "text_el": "Σταθερό μέλος σκυταλοδρομιών 4x200μ",
-          "text_en": "Regular member of 4x200m relay",
+          "text_el": "Καλύτερη Αθλήτρια Πανελληνίου (901 βαθμοί CMAS)",
+          "text_en": "Top Female Athlete, Hellenic Championship (901 CMAS pts)",
           "type": "other"
         }
       ],
-      "slug": "apostolos-lampadaris",
-      "photo": "/images/uploads/λαμπαδαρης.jpeg"
+      "slug": "ifigeneia-teliousi",
+      "photo": "/images/uploads/εικόνα_viber_2025-01-25_13-44-46-057-1-.jpg"
     },
     {
       "name": "Γιώργος Παναγιωτίδης",
@@ -167,30 +183,30 @@
       "photo": "/images/uploads/εικόνα_viber_2025-01-18_11-11-18-610_edited.jpg"
     },
     {
-      "name": "Ιωάννης Αργυρόπουλος",
-      "name_en": "Ioannis Argyropoulos",
-      "specialty": " Open Water",
-      "specialty_en": " Open Water",
+      "name": "Ευάγγελος Σ. Νικολαΐδης",
+      "name_en": "Evangelos S. Nikolaidis",
+      "specialty": "1500μ · Open Water",
+      "specialty_en": "1500m · Open Water",
       "icon": "fa-water",
       "achievements": [
         {
-          "text_el": "Παγκόσμιο Χάλκινο (4x1000m Mixed)",
-          "text_en": "World Bronze (4x1000m Mixed)",
-          "type": "bronze"
+          "text_el": "10ος στον κόσμο (1500μ Ανδρών — Βελιγράδι)",
+          "text_en": "10th in the world (1500m Men — Belgrade)",
+          "type": "world"
         },
         {
-          "text_el": "Ειδικότητα ανοιχτής θάλασσας",
-          "text_en": "Open water specialist",
-          "type": "other"
+          "text_el": "12:52.43 (1500μ επιφανείας)",
+          "text_en": "12:52.43 (1500m surface)",
+          "type": "time"
         },
         {
-          "text_el": "Εθνική Ομάδα Open Water",
-          "text_en": "Open Water National Team",
+          "text_el": "Εθνική Ομάδα Ανδρών",
+          "text_en": "Men's National Team",
           "type": "flag"
         }
       ],
-      "slug": "ioannis-argyropoulos",
-      "photo": "/images/uploads/εικόνα_viber_2025-09-12_15-48-25-673-1-.jpg"
+      "slug": "evangelos-nikolaidis",
+      "photo": "/images/uploads/εικόνα_viber_2025-01-18_11-11-16-799-1-.jpg"
     },
     {
       "name": "Ηλίας Καλφίδης",
@@ -224,6 +240,79 @@
       "photo": "/images/uploads/527914266_18046509746634959_3551052245012260557_n-1-.jpg"
     },
     {
+      "icon": "fa-medal",
+      "name": "Ζωή Κουτουρουσίου ",
+      "name_en": "Zoi Koutourousiou ",
+      "slug": "koutourousiou-zoi",
+      "photo": "/images/uploads/290149147_520564249865583_552873351748515314_n_edited.jpg",
+      "specialty": "1500μ Επιφανειας - Open Water",
+      "specialty_en": "1500m Surface - Open Water",
+      "achievements": [
+        {
+          "text_el": "Χρυσό μετάλλιο Open Water",
+          "text_en": "Gold medal Open Water",
+          "type": "gold"
+        },
+        {
+          "text_el": "Ασημένιο Μετάλλιο 1500μ Επιφανειας",
+          "text_en": "Silver Medal 1500m Surface",
+          "type": "silver"
+        },
+        {
+          "text_el": "Ειδικότητα Open Water",
+          "text_en": "Open Water Specialist",
+          "type": "other"
+        }
+      ]
+    },
+    {
+      "name": "Απόστολος Λαμπαδάρης",
+      "name_en": "Apostolos Lampadaris",
+      "specialty": "100μ & 200μ Επιφανείας",
+      "specialty_en": "100m & 200m Surface",
+      "icon": "fa-water",
+      "achievements": [
+        {
+          "text_el": "Όρια Ευρωπαϊκού (36.70\")",
+          "text_en": "European qualifying time (36.70\")",
+          "type": "flag"
+        },
+        {
+          "text_el": "Τελικοί Παγκοσμίου",
+          "text_en": "World Championship finals",
+          "type": "other"
+        },
+        {
+          "text_el": "Σταθερό μέλος σκυταλοδρομιών 4x200μ",
+          "text_en": "Regular member of 4x200m relay",
+          "type": "other"
+        }
+      ],
+      "slug": "apostolos-lampadaris",
+      "photo": "/images/uploads/λαμπαδαρης.jpeg"
+    },
+    {
+      "icon": "fa-medal",
+      "name": "Δανάη Μητακίδη ",
+      "name_en": "Danai Mitakidi ",
+      "slug": "mitakidi-danai",
+      "photo": "/images/uploads/274014244_433038181951524_8271995396765530215_n-1-.jpg",
+      "specialty": "Open Water",
+      "specialty_en": "Open Water",
+      "achievements": [
+        {
+          "text_el": "Ασημένιο μετάλλιο Open Water",
+          "text_en": "Silver Medal Open Water",
+          "type": "silver"
+        },
+        {
+          "text_el": "Εθνική Ομάδα Open Water",
+          "text_en": "Open Water National Team",
+          "type": "flag"
+        }
+      ]
+    },
+    {
       "name": "Μάριος Αρμουτσής",
       "name_en": "Marios Armoutsis",
       "specialty": "Open Water · Μεγάλες Αποστάσεις",
@@ -253,95 +342,6 @@
       ],
       "slug": "marios-armoutsis",
       "photo": "/images/uploads/εικόνα_viber_2025-09-12_15-48-26-007-1-.jpg"
-    },
-    {
-      "icon": "fa-medal",
-      "name": "Μάγδα Νικολαΐδου",
-      "specialty": "Open Water · Μεγάλες Αποστάσεις",
-      "name_en": "Magda Nikolaidou",
-      "slug": "magda-nikolaidou",
-      "photo": "/images/uploads/528282653_18046509764634959_2556772852929037013_n-1-.jpg",
-      "specialty_en": "Open Water · Long Distance",
-      "achievements": [
-        {
-          "text_el": "Ειδικότητα ανοιχτής θάλασσας",
-          "text_en": "Open water specialist",
-          "type": "other"
-        },
-        {
-          "text_el": "Εθνική Ομάδα Open Water",
-          "text_en": "National Team Open Water",
-          "type": "flag"
-        }
-      ]
-    },
-    {
-      "icon": "fa-medal",
-      "name": "Αφροδίτη Μπουσδούκη ",
-      "name_en": "Afroditi Bousdouki ",
-      "slug": "bousdouki-afroditi",
-      "photo": "/images/uploads/εικόνα_viber_2025-01-18_11-11-18-378-1-.jpg",
-      "specialty": " Open Water",
-      "specialty_en": " Open Water",
-      "achievements": [
-        {
-          "text_el": "Ειδικότητα Open Water",
-          "text_en": " Open Water Specialist",
-          "type": "other"
-        },
-        {
-          "text_el": "Εθνική Ομάδα Open Water",
-          "text_en": "Open Water National Team",
-          "type": "flag"
-        }
-      ]
-    },
-    {
-      "icon": "fa-medal",
-      "name": "Ζωή Κουτουρουσίου ",
-      "name_en": "Zoi Koutourousiou ",
-      "slug": "koutourousiou-zoi",
-      "photo": "/images/uploads/290149147_520564249865583_552873351748515314_n_edited.jpg",
-      "specialty": "1500μ Επιφανειας - Open Water",
-      "specialty_en": "1500m Surface - Open Water",
-      "achievements": [
-        {
-          "text_el": "Χρυσό μετάλλιο Open Water",
-          "text_en": "Gold medal Open Water",
-          "type": "gold"
-        },
-        {
-          "text_el": "Ασημένιο Μετάλλιο 1500μ Επιφανειας",
-          "text_en": "Silver Medal 1500m Surface",
-          "type": "silver"
-        },
-        {
-          "text_el": "Ειδικότητα Open Water",
-          "text_en": "Open Water Specialist",
-          "type": "other"
-        }
-      ]
-    },
-    {
-      "icon": "fa-medal",
-      "name": "Δανάη Μητακίδη ",
-      "name_en": "Danai Mitakidi ",
-      "slug": "mitakidi-danai",
-      "photo": "/images/uploads/274014244_433038181951524_8271995396765530215_n-1-.jpg",
-      "specialty": "Open Water",
-      "specialty_en": "Open Water",
-      "achievements": [
-        {
-          "text_el": "Ασημένιο μετάλλιο Open Water",
-          "text_en": "Silver Medal Open Water",
-          "type": "silver"
-        },
-        {
-          "text_el": "Εθνική Ομάδα Open Water",
-          "text_en": "Open Water National Team",
-          "type": "flag"
-        }
-      ]
     },
     {
       "icon": "fa-medal",
