@@ -473,6 +473,27 @@
           "type": "flag"
         }
       ]
+    },
+    {
+      "icon": "fa-medal",
+      "name": "Δημήτρης Παπουτσής ",
+      "name_en": "Dimitris Papoutsis",
+      "slug": "dimitris-papoutsis",
+      "photo": "/images/uploads/464227175_8615865998489188_4609912938967397575_n_edited_edited.jpg",
+      "specialty": "Open Water - Μεγάλες αποστάσεις",
+      "specialty_en": "Open Water",
+      "achievements": [
+        {
+          "text_el": "Ειδικότητα Open Water",
+          "text_en": "Open Water Specialist",
+          "type": "other"
+        },
+        {
+          "text_el": "Εθνική Ομάδα Open Water",
+          "text_en": "Open Water National Team",
+          "type": "flag"
+        }
+      ]
     }
   ]
 }
