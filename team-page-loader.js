@@ -33,13 +33,62 @@
     setAttr("twDesc", "content", `${age} — ${desc}`);
   }
 
+  function escape(text) {
+    if (!text) return "";
+    return String(text)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;");
+  }
+
+  function renderFAQs(team, lang) {
+    const faqs = (team.faqs || []).filter(f => f && (f.q || f.q_en));
+    if (!faqs.length) return "";
+
+    // Group by section (Greek section preferred, fallback EN, fallback no group)
+    const groups = new Map();
+    const order = [];
+    for (const f of faqs) {
+      const sec = lang === "en" ? (f.section_en || f.section || "") : (f.section || f.section_en || "");
+      if (!groups.has(sec)) { groups.set(sec, []); order.push(sec); }
+      groups.get(sec).push(f);
+    }
+
+    const faqTitle = lang === "en" ? "Frequently Asked Questions" : "Συχνές Ερωτήσεις";
+
+    let html = `<h2 class="faq-title"><i class="fas fa-circle-question"></i> ${faqTitle}</h2>`;
+    for (const sec of order) {
+      if (sec) {
+        html += `<h3 class="faq-section">${escape(sec)}</h3>`;
+      }
+      html += `<div class="faq-list">`;
+      for (const f of groups.get(sec)) {
+        const q = lang === "en" ? (f.q_en || f.q) : (f.q || f.q_en);
+        const a = lang === "en" ? (f.a_en || f.a) : (f.a || f.a_en);
+        const qUntr = lang === "en" && !f.q_en && f.q;
+        const aUntr = lang === "en" && !f.a_en && f.a;
+        const qWrap = qUntr ? ` lang="el"` : "";
+        const aWrap = aUntr ? ` lang="el"` : "";
+        html += `<details class="faq-item">
+          <summary class="faq-q"${qWrap}>${escape(q)}</summary>
+          <div class="faq-a"${aWrap}>${escape(a).replace(/\n/g, "<br>")}</div>
+        </details>`;
+      }
+      html += `</div>`;
+    }
+    return html;
+  }
+
   function render(team, lang) {
     const name = pick(team, "name", lang);
     const age = pick(team, "age", lang);
     const desc = pick(team, "description", lang);
     const sched = pick(team, "schedule", lang);
+    const coachIntro = pick(team, "coach_intro", lang);
 
     const ctaLabel = lang === "en" ? "Register / Contact us" : "Εγγραφή / Επικοινωνία";
+    const faqsHTML = renderFAQs(team, lang);
 
     container.innerHTML = `
       <article class="team-page">
@@ -47,6 +96,8 @@
         <h1>${name}</h1>
         ${desc ? `<p class="team-desc">${desc}</p>` : ""}
         ${sched ? `<div class="team-schedule"><i class="fas fa-clock"></i> ${sched}</div>` : ""}
+        ${coachIntro ? `<div class="team-coach-intro"><i class="fas fa-user-tie"></i> ${escape(coachIntro)}</div>` : ""}
+        ${faqsHTML}
         <div class="article-footer">
           <a href="/contact" class="btn btn-primary"><i class="fas fa-envelope"></i> ${ctaLabel}</a>
           <a href="/teams" class="btn btn-outline-dark"><i class="fas fa-arrow-left"></i> <span data-i18n="team.back">Πίσω στα Τμήματα</span></a>

@@ -204,6 +204,20 @@ collections:
               - { label: "Περιγραφή (αγγλικά)", name: "description_en", widget: "text" }
               - { label: "Πρόγραμμα", name: "schedule", widget: "string" }
               - { label: "Πρόγραμμα (αγγλικά)", name: "schedule_en", widget: "string" }
+              - { label: "Παρουσίαση Προπονητή (προαιρετικό)", name: "coach_intro", widget: "string", required: false, hint: "Π.χ. 'Απαντά ο Στράτος Μαλαμαδάκης — Υπεύθυνος προπονητής εκμάθησης'" }
+              - { label: "Παρουσίαση Προπονητή (Αγγλικά)", name: "coach_intro_en", widget: "string", required: false }
+              - label: "Ερωτήσεις & Απαντήσεις (FAQ)"
+                name: "faqs"
+                widget: "list"
+                required: false
+                summary: "{{fields.q}}"
+                fields:
+                  - { label: "Κατηγορία (προαιρετική)", name: "section", widget: "string", required: false, hint: "Π.χ. 'Κλασικής Κολύμβησης'. Αν συμπληρωθεί, οι ερωτήσεις ομαδοποιούνται με υπότιτλο." }
+                  - { label: "Κατηγορία (Αγγλικά)", name: "section_en", widget: "string", required: false }
+                  - { label: "Ερώτηση", name: "q", widget: "string" }
+                  - { label: "Ερώτηση (Αγγλικά)", name: "q_en", widget: "string", required: false }
+                  - { label: "Απάντηση", name: "a", widget: "text" }
+                  - { label: "Απάντηση (Αγγλικά)", name: "a_en", widget: "text", required: false }
               - { label: "Featured (Αγωνιστικό)", name: "featured", widget: "boolean", default: false }
 
   # ====================================================
