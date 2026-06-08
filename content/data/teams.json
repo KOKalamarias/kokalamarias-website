@@ -3,50 +3,50 @@
     {
       "age_en": "Ages 4 +",
       "name": "Τμήμα Εκμάθησης",
-      "description_en": "Playful introduction to water. Overcoming hydrophobia, learning breathing, floating and self-rescue.",
+      "slug": "learn-to-swim",
+      "description_en": "Playful Water Familiarization\nOvercoming Fear of Water, Learning Breathing, Floating and Water Safety Skills\nThe 10 Most Frequently Asked Questions to the Coach\nAnswered by Stratos Malamadakis – Head Learn-to-Swim Coach\n1. My child is afraid of the water. Can they still start swimming lessons?\n\nAbsolutely. Our initial goal is not for children to swim, but to feel safe and comfortable in the water. Every child adapts at their own pace, and we fully respect and support that individual journey.\n\n2. What is the main goal of the learn-to-swim program?\n\nOur goal is to help children develop confidence in the water, learn how to float, breathe correctly, and move independently and safely.\n\n3. Do you use games during the lessons?\n\nYes. At young ages, play is one of the most effective learning tools. Through games, children become comfortable in the water and develop a genuine love for swimming.\n\n4. How quickly will my child learn to swim?\n\nThere is no fixed timeline. Progress depends on the child's age, attendance frequency, personality, and individual learning pace.\n\n5. How do you know when a child is ready to move on to the Academy level?\n\nA child is ready when they can move independently in the water, follow instructions, and perform basic skills such as introductory freestyle and backstroke movements without flotation aids and with confidence and safety.\n\n6. How important is proper technique from an early age?\n\nIt is extremely important. Good habits and proper technique are built from the very beginning and accompany children throughout their athletic journey. Swimming is one of the few sports in which technical foundations need to be developed early, primarily for safety reasons.\n\n7. How many training sessions per week do you recommend?\n\nFor most children, two to three sessions per week provide the ideal balance for steady progress and skill development.\n\n8. Should parents push their child to progress quickly?\n\nNo. Our priority is for children to enjoy swimming and look forward to every lesson. They will learn to love the sport through play, positive experiences, and the relationships they build with their teammates and coaches.\n\n9. What is the most common mistake you see parents make?\n\nComparing their child to others. Every child develops at a different pace and may face challenges with different skills along the way.\n\n10. What would you like a child to have gained by the end of the learn-to-swim program?\n\nConfidence, safety, independence in the water, and a lifelong love for swimming and aquatic activities.",
       "featured": false,
       "schedule_en": "Monday to Friday 18:00 - 19:00 - Saturday 11:00 - 11:45",
       "schedule": "Δευτέρα με Παρασκευή 18:00 - 19:00 - Σάββατο 11:00 - 11:45",
-      "description": "Παιγνιώδης εξοικείωση με το νερό. Εξάλειψη υδροφοβίας, εκμάθηση αναπνοής επίπλευσης και αυτοδιάσωσης",
+      "description": "Παιγνιώδης εξοικείωση με το νερό. Εξάλειψη υδροφοβίας, εκμάθηση αναπνοής επίπλευσης και αυτοδιάσωσης\n\n10 συχνότερες ερωτήσεις προς τον προπονητή. Απαντά ο Στράτος Μαλαμαδάκης - Υπεύθυνος προπονητής εκμάθησης\n\n1. Το παιδί μου φοβάται το νερό. Μπορεί να ξεκινήσει;\n\nΦυσικά. Στόχος μας αρχικά δεν είναι να κολυμπήσει αλλά να νιώσει ασφάλεια μέσα στο νερό. Κάθε παιδί έχει τον δικό του ρυθμό προσαρμογής και τον σεβόμαστε.\n\n2. Ποιος είναι ο βασικός στόχος της εκμάθησης;\n\nΝα αποκτήσει το παιδί αυτοπεποίθηση στο νερό, να μάθει να επιπλέει, να αναπνέει σωστά και να κινηθεί αυτόνομα με ασφάλεια.\n\n3. Χρησιμοποιείτε παιχνίδι στο μάθημα;\n\nΝαι. Στις μικρές ηλικίες το παιχνίδι αποτελεί βασικό εργαλείο μάθησης και βοηθά το παιδί να αγαπήσει το νερό.\n\n4. Πόσο γρήγορα θα μάθει να κολυμπάει;\n\nΔεν υπάρχει συγκεκριμένο χρονοδιάγραμμα. Η πρόοδος εξαρτάται από την ηλικία, τη συχνότητα προπόνησης και την προσωπικότητα κάθε παιδιού.\n\n5. Πότε καταλαβαίνετε ότι ένα παιδί είναι έτοιμο για το επόμενο επίπεδο ακαδημιών;\n\nΌταν μπορεί να κινηθεί αυτόνομα στο νερό, να ακολουθεί οδηγίες και να εκτελεί βασικές δεξιότητες όπως αρχικές κινήσεις ελευθέρου και υπτίου χωρίς πλευστικό μέσο με ασφάλεια.\n\n6. Πόσο σημαντική είναι η σωστή τεχνική από μικρή ηλικία;\n\nΕίναι πολύ σημαντική. Οι σωστές βάσεις χτίζονται από την αρχή και συνοδεύουν το παιδί σε όλη την αθλητική του πορεία. Το κολύμπι είναι από τα λίγα αθλήματα που η τεχνική πρέπει να φτάνει σε υψηλό επίπεδο από την αρχή, κυρίως για λόγους ασφάλειας.\n\n7. Πόσες φορές την εβδομάδα προτείνετε προπόνηση;\n\nΓια τα περισσότερα παιδιά δύο έως τρεις φορές την εβδομάδα είναι ιδανικές για σταθερή πρόοδο.\n\n8. Πρέπει οι γονείς να πιέζουν το παιδί να προχωρήσει γρήγορα;\n\nΌχι. Προτεραιότητά μας είναι να αγαπήσει την κολύμβηση και να νιώθει χαρά κάθε φορά που έρχεται στην πισίνα. Θα το αγαπήσει μέσα από το παιχνίδι και από την σχέσεις που αναπτύσσει με τα άλλα τα παιδιά και τους προπονητές του.\n\n9. Ποιο είναι το συχνότερο λάθος που βλέπετε;\n\nΗ σύγκριση με άλλα παιδιά. Κάθε παιδί εξελίσσεται με διαφορετικό ρυθμό και \"κολλάει\" σε διαφορετικές δεξιότητες.\n\n10. Τι θέλετε να έχει κερδίσει ένα παιδί στο τέλος της εκμάθησης;\n\nΑσφάλεια, αυτοπεποίθηση και αγάπη για το νερό.",
       "name_en": "Learn-to-Swim",
-      "age": "4 +",
-      "slug": "learn-to-swim"
+      "age": "4 +"
     },
     {
       "age_en": "Ages 6+ ",
       "name": "Ακαδημία",
+      "slug": "academy",
       "description_en": "Teaching the four strokes (freestyle, backstroke, breaststroke, butterfly), starts & turns.",
       "featured": false,
       "schedule_en": "Monday to Friday 18:00 - 19:00 - Saturday 11:00 - 11:45",
       "schedule": "Δευτέρα με Παρασκευή 18:00 - 19:00 - Σάββατο 11:00 - 11:45",
       "description": "Διδασκαλία των τεσσάρων στιλ (ελεύθερο, ύπτιο, πρόσθιο, πεταλούδα), εκκινήσεις & στροφές.",
       "name_en": "Academy",
-      "age": "Ηλικία 6+",
-      "slug": "academy"
+      "age": "Ηλικία 6+"
     },
     {
       "age_en": "Ages 8 +",
       "name": "Προαγωνιστικό",
+      "slug": "pre-competitive",
       "description_en": "Increased mileage, technique under fatigue, introduction to HSF events.",
       "featured": false,
       "schedule_en": "4 times per week",
       "schedule": "4 φορές/εβδομάδα",
       "description": "Αύξηση χιλιομετρικού όγκου, τεχνική υπό κόπωση, εισαγωγή σε ημερίδες ΚΟΕ.",
       "name_en": "Pre-Competitive",
-      "age": "Ηλικία 8+",
-      "slug": "pre-competitive"
+      "age": "Ηλικία 8+"
     },
     {
       "age_en": "Ages 12+",
       "name": "Αγωνιστικό & Τεχνική",
+      "slug": "competitive",
       "description_en": "Transition to Finswimming: monofin, bi-fins, apnea. Participation in Hellenic & International events.",
       "featured": true,
       "schedule_en": "Daily (morning & evening)",
       "schedule": "Καθημερινά (πρωί & βράδυ)",
       "description": "Μετάβαση στην Τεχνική Κολύμβηση: μονοπέδιλο, διπλά πέδιλα, άπνοια. Συμμετοχή σε Πανελλήνια & Διεθνή.",
       "name_en": "Competitive & Finswimming",
-      "age": "12+ ετών",
-      "slug": "competitive"
+      "age": "12+ ετών"
     }
   ]
 }
