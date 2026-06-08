@@ -56,8 +56,14 @@
     }
 
     const faqTitle = lang === "en" ? "Frequently Asked Questions" : "Συχνές Ερωτήσεις";
+    const faqIntro = lang === "en"
+      ? "Click on any question to reveal the answer ↓"
+      : "Πατήστε σε κάθε ερώτηση για να εμφανιστεί η απάντηση ↓";
 
-    let html = `<h2 class="faq-title"><i class="fas fa-circle-question"></i> ${faqTitle}</h2>`;
+    let html = `<div class="faq-header">
+      <h2 class="faq-title"><i class="fas fa-circle-question"></i> ${faqTitle}</h2>
+      <p class="faq-intro">${faqIntro}</p>
+    </div>`;
     for (const sec of order) {
       if (sec) {
         html += `<h3 class="faq-section">${escape(sec)}</h3>`;
@@ -70,8 +76,12 @@
         const aUntr = lang === "en" && !f.a_en && f.a;
         const qWrap = qUntr ? ` lang="el"` : "";
         const aWrap = aUntr ? ` lang="el"` : "";
+        const hintText = lang === "en" ? "Click to read" : "Πατήστε για ανάγνωση";
         html += `<details class="faq-item">
-          <summary class="faq-q"${qWrap}>${escape(q)}</summary>
+          <summary class="faq-q"${qWrap}>
+            <span class="faq-q-text">${escape(q)}</span>
+            <span class="faq-q-hint">${hintText}</span>
+          </summary>
           <div class="faq-a"${aWrap}>${escape(a).replace(/\n/g, "<br>")}</div>
         </details>`;
       }
