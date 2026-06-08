@@ -2022,3 +2022,59 @@ html[lang="en"] .lang-only-el { display: none !important; }
   .faq-q-hint { display: none; }  /* Hide hint on mobile (tap is obvious) */
   .faq-intro { font-size: 0.88rem; }
 }
+
+/* ============================================
+   /teams listing — invite to click CTA
+   ============================================ */
+.program-card-link {
+  display: block;
+  text-decoration: none;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  position: relative;
+}
+.program-card-link:hover {
+  transform: translateY(-4px);
+}
+.program-card-link img {
+  transition: filter 0.25s ease;
+}
+.program-card-link:hover img {
+  filter: brightness(1.05) saturate(1.1);
+}
+.program-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, var(--blue-700, #1B95D4), var(--blue-900, #15366B));
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 24px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  margin-top: 14px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 3px 12px rgba(27, 149, 212, 0.25);
+  letter-spacing: 0.2px;
+}
+.program-cta .fa-arrow-right {
+  transition: transform 0.2s ease;
+}
+.program-card-link:hover .program-cta {
+  transform: scale(1.03);
+  box-shadow: 0 5px 18px rgba(27, 149, 212, 0.4);
+}
+.program-card-link:hover .program-cta .fa-arrow-right {
+  transform: translateX(4px);
+}
+
+/* Gentle pulse on the CTA buttons so users notice */
+@keyframes programCtaPulse {
+  0%, 100% { box-shadow: 0 3px 12px rgba(27, 149, 212, 0.25); }
+  50%      { box-shadow: 0 3px 12px rgba(27, 149, 212, 0.25), 0 0 0 6px rgba(244, 200, 66, 0.25); }
+}
+.program-cta {
+  animation: programCtaPulse 2.8s ease-in-out infinite;
+}
+.program-card-link:hover .program-cta {
+  animation: none;  /* Stop pulsing on hover */
+}

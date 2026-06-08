@@ -42,14 +42,17 @@
 
       const desc = pick(team, "description", lang);
       const sched = pick(team, "schedule", lang);
+      const hasSlug = team.slug && document.body.dataset.page === "teams";
+      const ctaLabel = lang === "en" ? "Read more & FAQ" : "Δείτε περισσότερα & FAQ";
 
-      if (!desc && !sched) return;
+      if (!desc && !sched && !hasSlug) return;
 
       const caption = document.createElement("div");
       caption.className = "program-caption";
       caption.innerHTML = `
         ${desc ? `<p class="program-desc">${desc}</p>` : ""}
         ${sched ? `<div class="program-schedule"><i class="fas fa-clock"></i> ${sched}</div>` : ""}
+        ${hasSlug ? `<span class="program-cta"><i class="fas fa-circle-question"></i> ${ctaLabel} <i class="fas fa-arrow-right"></i></span>` : ""}
       `;
       card.appendChild(caption);
     });
