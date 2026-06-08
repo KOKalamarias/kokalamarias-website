@@ -206,6 +206,7 @@ collections:
               - { label: "Πρόγραμμα (αγγλικά)", name: "schedule_en", widget: "string" }
               - { label: "Παρουσίαση Προπονητή (προαιρετικό)", name: "coach_intro", widget: "string", required: false, hint: "Π.χ. 'Απαντά ο Στράτος Μαλαμαδάκης — Υπεύθυνος προπονητής εκμάθησης'" }
               - { label: "Παρουσίαση Προπονητή (Αγγλικά)", name: "coach_intro_en", widget: "string", required: false }
+              - { label: "Φωτογραφία Προπονητή (προαιρετικό)", name: "coach_photo", widget: "image", required: false, hint: "Τετράγωνη φωτό προπονητή, ιδανικά 600x600 px. Εμφανίζεται κυκλικά δίπλα στο όνομα." }
               - label: "Ερωτήσεις & Απαντήσεις (FAQ)"
                 name: "faqs"
                 widget: "list"

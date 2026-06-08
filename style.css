@@ -2078,3 +2078,40 @@ html[lang="en"] .lang-only-el { display: none !important; }
 .program-card-link:hover .program-cta {
   animation: none;  /* Stop pulsing on hover */
 }
+
+/* ============================================
+   Coach intro with photo avatar
+   ============================================ */
+.team-coach-intro {
+  /* Override the older inline-flex styling with new image-friendly layout */
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 18px 12px 12px;
+  max-width: fit-content;
+}
+.team-coach-intro .team-coach-icon {
+  font-size: 1.3rem;
+  color: var(--blue-900, #15366B);
+  flex-shrink: 0;
+}
+.team-coach-photo {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 3px solid #fff;
+  box-shadow: 0 2px 8px rgba(21, 54, 107, 0.18);
+  background: #fff;
+}
+.team-coach-intro span {
+  line-height: 1.4;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 640px) {
+  .team-coach-photo { width: 48px; height: 48px; border-width: 2px; }
+  .team-coach-intro { gap: 10px; padding: 10px 14px 10px 10px; }
+  .team-coach-intro span { font-size: 0.9rem; }
+}

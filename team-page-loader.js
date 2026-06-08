@@ -106,7 +106,7 @@
         <h1>${name}</h1>
         ${desc ? `<p class="team-desc">${desc}</p>` : ""}
         ${sched ? `<div class="team-schedule"><i class="fas fa-clock"></i> ${sched}</div>` : ""}
-        ${coachIntro ? `<div class="team-coach-intro"><i class="fas fa-user-tie"></i> ${escape(coachIntro)}</div>` : ""}
+        ${coachIntro ? `<div class="team-coach-intro">${team.coach_photo ? `<img class="team-coach-photo" src="${team.coach_photo}" alt="${escape(coachIntro.split('—')[0].trim())}" loading="lazy" />` : `<i class="fas fa-user-tie team-coach-icon"></i>`}<span>${escape(coachIntro)}</span></div>` : ""}
         ${faqsHTML}
         <div class="article-footer">
           <a href="/contact" class="btn btn-primary"><i class="fas fa-envelope"></i> ${ctaLabel}</a>
