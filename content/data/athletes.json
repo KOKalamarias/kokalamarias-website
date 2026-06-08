@@ -169,14 +169,14 @@
           "type": "gold"
         },
         {
-          "text_el": "6ος στον κόσμο (4x100 Ανδρών — Βελιγράδι)",
-          "text_en": "6th in the world (4x100 Men — Belgrade)",
-          "type": "world"
-        },
-        {
           "text_el": "Ασημένιο Μετάλλιο Ευρωπαικό Πρωτάθλημα Ανδρών",
           "text_en": "Silver Medal European Championship",
           "type": "silver"
+        },
+        {
+          "text_el": "6ος στον κόσμο (4x100 Ανδρών — Βελιγράδι)",
+          "text_en": "6th in the world (4x100 Men — Belgrade)",
+          "type": "world"
         }
       ],
       "slug": "giorgos-panagiotidis",
@@ -190,9 +190,9 @@
       "icon": "fa-water",
       "achievements": [
         {
-          "text_el": "10ος στον κόσμο (1500μ Ανδρών — Βελιγράδι)",
-          "text_en": "10th in the world (1500m Men — Belgrade)",
-          "type": "world"
+          "text_el": "Ασημένιο Μετάλλιο Παγκόσμιο Πρωτάθλημα Ανδρών",
+          "text_en": "Silver Medal World Championship",
+          "type": "silver"
         },
         {
           "text_el": "12:52.43 (1500μ επιφανείας)",
@@ -226,9 +226,9 @@
           "type": "gold"
         },
         {
-          "text_el": "47:44.53 (5.000μ επιφανείας)",
-          "text_en": "47:44.53 (5,000m surface)",
-          "type": "time"
+          "text_el": "Χρυσό Μετάλλιο 150μ Open Water (Γαλλία)",
+          "text_en": "Gold Medal 150μ Open Water (France)",
+          "type": "gold"
         },
         {
           "text_el": "Εθνική Ομάδα Open Water",
@@ -273,9 +273,9 @@
       "icon": "fa-water",
       "achievements": [
         {
-          "text_el": "Όρια Ευρωπαϊκού (36.70\")",
-          "text_en": "European qualifying time (36.70\")",
-          "type": "flag"
+          "text_el": "Χρυσό μετάλλιο (Poznan)",
+          "text_en": "Gold Medal (Poznan)",
+          "type": "gold"
         },
         {
           "text_el": "Τελικοί Παγκοσμίου",
