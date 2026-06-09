@@ -159,7 +159,7 @@
       : "";
 
     const imageBlock = article.image
-      ? `<div class="article-hero-photo"><img src="${article.image}" alt="${titleR.text}" /></div>`
+      ? `<div class="article-hero-photo"><img src="${article.image}" alt="${titleR.text}" onload="if(this.naturalWidth>this.naturalHeight*1.2)this.classList.add('landscape')" /></div>`
       : "";
     const videoBlock = videoEmbedHTML(article.video);
 
