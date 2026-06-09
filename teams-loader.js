@@ -50,13 +50,13 @@
 
       if (!desc && !sched && !hasSlug) return;
 
-      // Both home and /teams show the description.
-      // Schedule shown only on /teams (more detail there).
+      // Description + schedule shown on both home and /teams (as before).
+      // Only the CTA label is simplified from "Δείτε περισσότερα & FAQ" → "Δείτε περισσότερα".
       const caption = document.createElement("div");
       caption.className = "program-caption";
       caption.innerHTML = `
         ${desc ? `<p class="program-desc">${desc}</p>` : ""}
-        ${(isTeamsPage && sched) ? `<div class="program-schedule"><i class="fas fa-clock"></i> ${sched}</div>` : ""}
+        ${sched ? `<div class="program-schedule"><i class="fas fa-clock"></i> ${sched}</div>` : ""}
         ${hasSlug ? `<span class="program-cta">${ctaLabel} <i class="fas fa-arrow-right"></i></span>` : ""}
       `;
       card.appendChild(caption);
