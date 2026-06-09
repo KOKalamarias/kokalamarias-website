@@ -26,6 +26,8 @@
       const el = document.getElementById(id);
       if (el) el.setAttribute(attr, value);
     };
+    const cleanURL = window.location.origin + window.location.pathname.replace(/\/+$/, "");
+    setAttr("canonicalLink", "href", cleanURL);
     setAttr("metaDesc", "content", `${age} — ${desc}`);
     setAttr("ogTitle", "content", name + " — Κ.Ο. Καλαμαριάς");
     setAttr("ogDesc", "content", `${age} — ${desc}`);

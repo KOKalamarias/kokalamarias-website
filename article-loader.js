@@ -125,6 +125,8 @@
       const el = document.getElementById(id);
       if (el) el.setAttribute(attr, value);
     };
+    const cleanURL = window.location.origin + window.location.pathname.replace(/\/+$/, "");
+    setAttr("canonicalLink", "href", cleanURL);
     setAttr("metaDesc", "content", summary);
     setAttr("ogTitle", "content", title + " — Κ.Ο. Καλαμαριάς");
     setAttr("ogDesc", "content", summary);
