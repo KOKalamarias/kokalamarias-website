@@ -50,13 +50,13 @@
 
       if (!desc && !sched && !hasSlug) return;
 
-      // Show description & schedule ONLY on /teams (not on home, which is just image previews)
-      const showDetails = isTeamsPage;
+      // Both home and /teams show the description.
+      // Schedule shown only on /teams (more detail there).
       const caption = document.createElement("div");
       caption.className = "program-caption";
       caption.innerHTML = `
-        ${(showDetails && desc) ? `<p class="program-desc">${desc}</p>` : ""}
-        ${(showDetails && sched) ? `<div class="program-schedule"><i class="fas fa-clock"></i> ${sched}</div>` : ""}
+        ${desc ? `<p class="program-desc">${desc}</p>` : ""}
+        ${(isTeamsPage && sched) ? `<div class="program-schedule"><i class="fas fa-clock"></i> ${sched}</div>` : ""}
         ${hasSlug ? `<span class="program-cta">${ctaLabel} <i class="fas fa-arrow-right"></i></span>` : ""}
       `;
       card.appendChild(caption);
