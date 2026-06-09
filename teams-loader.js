@@ -26,13 +26,17 @@
     }
     const lang = document.documentElement.lang || "el";
 
+    const page = document.body.dataset.page; // "teams" or "home"
+    const isTeamsPage = page === "teams";
+    const isHomePage  = page === "home";
+    const ctaLabel = lang === "en" ? "See more" : "Δείτε περισσότερα";
+
     cards.forEach((card, idx) => {
       const team = cache[idx];
       if (!team) return;
 
-      // If the card is on teams.html and has a slug, redirect to the individual team page
-      // We only override the href on /teams (not on the home page index.html)
-      if (team.slug && document.body.dataset.page === "teams") {
+      // Redirect cards to their individual team page (on both home and teams listing)
+      if (team.slug && (isTeamsPage || isHomePage)) {
         card.setAttribute("href", `/teams/${team.slug}`);
       }
 
@@ -42,17 +46,18 @@
 
       const desc = pick(team, "description", lang);
       const sched = pick(team, "schedule", lang);
-      const hasSlug = team.slug && document.body.dataset.page === "teams";
-      const ctaLabel = lang === "en" ? "Read more & FAQ" : "Δείτε περισσότερα & FAQ";
+      const hasSlug = team.slug && (isTeamsPage || isHomePage);
 
       if (!desc && !sched && !hasSlug) return;
 
+      // Show description & schedule ONLY on /teams (not on home, which is just image previews)
+      const showDetails = isTeamsPage;
       const caption = document.createElement("div");
       caption.className = "program-caption";
       caption.innerHTML = `
-        ${desc ? `<p class="program-desc">${desc}</p>` : ""}
-        ${sched ? `<div class="program-schedule"><i class="fas fa-clock"></i> ${sched}</div>` : ""}
-        ${hasSlug ? `<span class="program-cta"><i class="fas fa-circle-question"></i> ${ctaLabel} <i class="fas fa-arrow-right"></i></span>` : ""}
+        ${(showDetails && desc) ? `<p class="program-desc">${desc}</p>` : ""}
+        ${(showDetails && sched) ? `<div class="program-schedule"><i class="fas fa-clock"></i> ${sched}</div>` : ""}
+        ${hasSlug ? `<span class="program-cta">${ctaLabel} <i class="fas fa-arrow-right"></i></span>` : ""}
       `;
       card.appendChild(caption);
     });
