@@ -23,6 +23,9 @@ const TRANSLATIONS = {
     "nav.dd.about": "Ιστορία & Σχετικά",
     "nav.dd.board": "Διοίκηση & Οργάνωση",
     "nav.dd.coaches": "Προπονητικό Επιτελείο",
+    "notfound.title": "Η σελίδα δεν βρέθηκε",
+    "notfound.msg": "Η σελίδα που ψάχνετε δεν υπάρχει ή έχει μετακινηθεί.",
+    "notfound.home": "Πίσω στην Αρχική",
 
     "home.cards_tag": "Εξερευνήστε",
     "home.cards_title": "Γνωρίστε τον Όμιλο",
@@ -269,6 +272,9 @@ const TRANSLATIONS = {
     "nav.dd.about": "History & About",
     "nav.dd.board": "Governance & Organisation",
     "nav.dd.coaches": "Coaching Staff",
+    "notfound.title": "Page not found",
+    "notfound.msg": "The page you are looking for does not exist or has been moved.",
+    "notfound.home": "Back to Home",
 
     "home.cards_tag": "Explore",
     "home.cards_title": "Discover the Club",
