@@ -7,6 +7,15 @@
   const grid = document.getElementById("boardGrid");
   if (!grid) return;
 
+  function showLoadError() {
+    if (!grid || grid.children.length > 0) return;
+    const lang = document.documentElement.lang || "el";
+    const t = lang === "en"
+      ? { msg: "Couldn't load the content. Please check your connection and refresh the page.", retry: "Refresh" }
+      : { msg: "Δεν ήταν δυνατή η φόρτωση του περιεχομένου. Ελέγξτε τη σύνδεσή σας και ανανεώστε τη σελίδα.", retry: "Ανανέωση" };
+    grid.innerHTML = `<div class="load-error"><i class="fas fa-triangle-exclamation"></i><p>${t.msg}</p><button type="button" onclick="location.reload()">${t.retry}</button></div>`;
+  }
+
   function pick(item, field, lang) {
     return (lang === "en" && item[field + "_en"]) ? item[field + "_en"] : (item[field] || "");
   }
@@ -34,6 +43,7 @@
         cache = data.members || [];
       } catch (err) {
         console.error("Failed to load board.json:", err);
+        showLoadError();
         return;
       }
     }

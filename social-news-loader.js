@@ -7,6 +7,15 @@
   const grid = document.getElementById("socialNewsGrid");
   if (!grid) return;
 
+  function showLoadError() {
+    if (!grid || grid.children.length > 0) return;
+    const lang = document.documentElement.lang || "el";
+    const t = lang === "en"
+      ? { msg: "Couldn't load the content. Please check your connection and refresh the page.", retry: "Refresh" }
+      : { msg: "Δεν ήταν δυνατή η φόρτωση του περιεχομένου. Ελέγξτε τη σύνδεσή σας και ανανεώστε τη σελίδα.", retry: "Ανανέωση" };
+    grid.innerHTML = `<div class="load-error"><i class="fas fa-triangle-exclamation"></i><p>${t.msg}</p><button type="button" onclick="location.reload()">${t.retry}</button></div>`;
+  }
+
   const CATEGORY_LABELS = {
     charity:      { el: "Φιλανθρωπία",       en: "Charity" },
     "safe-water": { el: "Safe Water Sports", en: "Safe Water Sports" },
@@ -123,6 +132,7 @@
         cache = data.articles || [];
       } catch (err) {
         console.error("Failed to load social.json:", err);
+        showLoadError();
         return;
       }
     }

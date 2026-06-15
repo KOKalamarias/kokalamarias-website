@@ -7,6 +7,15 @@
   const grid = document.getElementById("championsGrid");
   if (!grid) return;
 
+  function showLoadError() {
+    if (!grid || grid.children.length > 0) return;
+    const lang = document.documentElement.lang || "el";
+    const t = lang === "en"
+      ? { msg: "Couldn't load the content. Please check your connection and refresh the page.", retry: "Refresh" }
+      : { msg: "Δεν ήταν δυνατή η φόρτωση του περιεχομένου. Ελέγξτε τη σύνδεσή σας και ανανεώστε τη σελίδα.", retry: "Ανανέωση" };
+    grid.innerHTML = `<div class="load-error"><i class="fas fa-triangle-exclamation"></i><p>${t.msg}</p><button type="button" onclick="location.reload()">${t.retry}</button></div>`;
+  }
+
   // Icon class για κάθε τύπο διάκρισης
   const TYPE_ICON = {
     gold:   { icon: "fa-trophy", cls: "gold" },
@@ -65,6 +74,7 @@
         cache = data.items || [];
       } catch (err) {
         console.error("Failed to load athletes.json:", err);
+        showLoadError();
         return;
       }
     }
