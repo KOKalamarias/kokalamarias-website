@@ -1,193 +1,159 @@
-# 🚀 Οδηγός Ανέβασματος Site & Χρήσης CMS
+# 🛠 Τεχνική Τεκμηρίωση — kokalamarias.gr
 
-Αυτός ο οδηγός εξηγεί **βήμα-βήμα** πώς να ανεβάσεις το site στο internet (`kokalamarias.gr`) και πώς να ενημερώνεις νέα/αθλητές/κείμενα μέσω του admin πάνελ.
+**Για ποιον είναι**: Για τον τεχνικό διαχειριστή του site (τωρινό ή μελλοντικό). Περιγράφει **όλη** την αρχιτεκτονική, τους λογαριασμούς και τις διαδικασίες. Ο μη-τεχνικός χρήστης δεν χρειάζεται αυτό το αρχείο — έχει το [MANUAL.md](MANUAL.md).
 
-**Δεν χρειάζεσαι τεχνικές γνώσεις.** Όλα τα βήματα γίνονται μέσω browser.
+*Τελευταία ενημέρωση: Ιούνιος 2026*
 
 ---
 
-## ⚡ Quick Start — 30 λεπτά
+## 🗺 Αρχιτεκτονική — Συνολική Εικόνα
 
-| # | Βήμα | Που |
+```
+Επισκέπτης
+   │
+   ▼
+kokalamarias.gr  ──301──▶  www.kokalamarias.gr
+(παλιό hosting pointer.gr,      (Cloudflare Pages)
+ μόνο redirect)                        ▲
+                                       │ auto-deploy σε κάθε push
+                                       │
+GitHub repo: KOKalamarias/kokalamarias-website (branch: main)
+   ▲                    ▲
+   │ git push           │ commits μέσω CMS
+   │                    │
+Τεχνικός           Decap CMS (/admin)
+(GitHub Desktop)        │
+                        ▼
+              OAuth Worker (Cloudflare)
+              decap-proxy.empty-cloud-336b.workers.dev
+```
+
+**Email** (ανεξάρτητο από το site): `info@kokalamarias.gr` → Zoho EU, μέσω MX records στο freedns του pointer.gr.
+
+---
+
+## 📋 Λογαριασμοί & Υπηρεσίες
+
+| Υπηρεσία | Λογαριασμός | Ρόλος |
 |---|---|---|
-| 1 | Φτιάξε **GitHub account** (δωρεάν) | [github.com/signup](https://github.com/signup) |
-| 2 | Ανέβασε τον φάκελο `kok-website-v2` ως **νέο repository** | github.com |
-| 3 | Φτιάξε **Netlify account** (δωρεάν, login με GitHub) | [netlify.com](https://netlify.com) |
-| 4 | Πάτα **«Add new site → Import from Git»** και διάλεξε το repo | Netlify dashboard |
-| 5 | Σύνδεσε το domain `kokalamarias.gr` | Netlify → Domain settings |
-| 6 | Ενεργοποίησε **Netlify Identity + Git Gateway** | Netlify → Identity tab |
-| 7 | Προσκάλεσε τον εαυτό σου ως **editor** | Identity → Invite users |
-| 8 | Login στο `kokalamarias.gr/admin` | Browser |
+| **GitHub** | `KOKalamarias` (info@kokalamarias.gr) | Repo + CMS login |
+| **Cloudflare** | info@kokalamarias.gr | Pages hosting + OAuth Worker |
+| **pointer.gr** | λογαριασμός ΚΟΚ | Domain registrar + Free DNS + παλιό hosting (μόνο για apex redirect) |
+| **Zoho EU** | info@kokalamarias.gr | Email |
+| **Web3Forms** | info@kokalamarias.gr | Φόρμα επικοινωνίας (access key στο script.js — public key, ασφαλές) |
 
 ---
 
-## 📦 Τι περιλαμβάνει αυτός ο φάκελος
+## 🌐 DNS (Free DNS @ pointer.gr)
 
-```
-kok-website-v2/
-├── admin/                          ← Decap CMS admin panel
-│   ├── index.html
-│   └── config.yml                  ← Ρυθμίσεις πεδίων που μπορούν να επεξεργαστούν
-│
-├── content/                        ← ΟΛΑ τα κείμενα του site (επεξεργάσιμα από CMS)
-│   ├── data/
-│   │   ├── news.json               ← Άρθρα/Νέα
-│   │   ├── athletes.json           ← 9 Πρωταθλητές
-│   │   ├── board.json              ← 7 μέλη ΔΣ
-│   │   ├── teams.json              ← 4 τμήματα
-│   │   └── site.json               ← Κείμενα Hero, About, Contact κλπ
-│   └── news/                       ← (placeholder folder)
-│
-├── images/                         ← Όλες οι εικόνες
-│   └── uploads/                    ← Νέες φωτογραφίες από το CMS
-│
-├── index.html, club.html, ...      ← Οι σελίδες του site
-├── style.css, script.js, ...       ← Κώδικας
-└── DEPLOYMENT.md                   ← Αυτός ο οδηγός
-```
+Nameservers: `freedns1.pointer.gr` / `freedns2.pointer.gr`
+
+| Record | Τύπος | Τιμή | Σκοπός |
+|---|---|---|---|
+| `www` | CNAME | `kokalamarias-website.pages.dev` | Site → Cloudflare Pages |
+| `@` (apex) | A | `185.25.23.211` | Παλιό hosting pointer.gr → κάνει 301 στο www |
+| `@` | MX ×3 | `mx.zoho.eu` (10), `mx2` (20), `mx3` (50) | Email Zoho |
+| `@` | TXT | `v=spf1 include:zohomail.eu ~all` | SPF |
+| `zmail._domainkey` | TXT | (DKIM key) | DKIM |
+| `_dmarc` | TXT | `v=DMARC1; ...` | DMARC |
+
+⚠️ **ΠΡΟΣΟΧΗ**: Μην ενεργοποιήσεις ποτέ το «Domain Forward» του pointer.gr — **απενεργοποιεί το Free DNS** και ρίχνει email + site.
+
+### Apex redirect
+
+Το `kokalamarias.gr` (χωρίς www) δείχνει στο παλιό hosting του pointer.gr (cPanel, `linux56.name-servers.gr`, χρήστης `ko664509`). Στο `public_html/` υπάρχουν **μόνο** 2 αρχεία:
+- `.htaccess` → 301 redirect στο `https://www.kokalamarias.gr/$1`
+- `index.html` → meta-refresh fallback
 
 ---
 
-## 🪜 Αναλυτικά Βήματα
+## ☁️ Cloudflare Pages
 
-### Βήμα 1 — GitHub Account
+- **Project**: `kokalamarias-website`
+- **Source**: GitHub repo, branch `main`, auto-deploy σε κάθε push (~1 λεπτό)
+- **Custom domain**: `www.kokalamarias.gr` (CNAME validation, ΟΧΙ full DNS transfer)
+- **Build**: κανένα build step — στατικά αρχεία από root
 
-1. Πήγαινε στο [github.com/signup](https://github.com/signup)
-2. Φτιάξε λογαριασμό με το email του ομίλου (π.χ. `info@kokalamarias.gr`)
-3. Επιβεβαίωσε το email
+### Ειδικά αρχεία
 
-### Βήμα 2 — Ανέβασμα Repository
-
-**Επιλογή Α — Μέσω GitHub Desktop (συνιστάται για μη-τεχνικούς):**
-1. Κατέβασε το [GitHub Desktop](https://desktop.github.com/)
-2. Login με τα GitHub credentials σου
-3. File → Add Local Repository → Διάλεξε τον `kok-website-v2/` φάκελο
-4. Publish repository → Όνομα: `kokalamarias-website` → Public OR Private
-5. Πάτα «Publish»
-
-**Επιλογή Β — Online (drag & drop):**
-1. Πήγαινε στο [github.com/new](https://github.com/new)
-2. Όνομα: `kokalamarias-website`
-3. **Public** για δωρεάν Netlify (αν θες Private, χρειάζεται Netlify paid plan)
-4. Πάτα «Create repository»
-5. Στη σελίδα που εμφανίζεται, πάτα **«uploading an existing file»**
-6. Σύρε ΟΛΟ τον φάκελο `kok-website-v2` μέσα
-7. «Commit changes»
-
-### Βήμα 3 — Netlify Account & Deploy
-
-1. Πήγαινε στο [netlify.com](https://netlify.com)
-2. Πάτα **«Sign up»** → Login with GitHub
-3. Στο dashboard, πάτα **«Add new site → Import an existing project»**
-4. Διάλεξε **GitHub** ως πάροχο
-5. Διάλεξε το repository `kokalamarias-website`
-6. **Build settings**: Άφησε τα κενά (είναι static site, δεν χρειάζεται build)
-7. Πάτα **«Deploy»**
-
-Σε ~30 δευτερόλεπτα το site θα είναι ζωντανό σε μια προσωρινή διεύθυνση τύπου `random-name-12345.netlify.app`.
-
-### Βήμα 4 — Σύνδεση με kokalamarias.gr
-
-1. Στο Netlify dashboard, πάτα το site σου
-2. **«Domain settings» → «Add custom domain»**
-3. Πληκτρολόγησε `kokalamarias.gr`
-4. Το Netlify θα σου δώσει **DNS records** που πρέπει να βάλεις στον πάροχο που έχει το domain (π.χ. Papaki, GoDaddy)
-5. Πες στον πάροχο του domain να δείξει το nameservers / A records σύμφωνα με τις οδηγίες Netlify
-6. Μετά από 1-24 ώρες, το `kokalamarias.gr` οδηγεί στο site σου
-7. Το Netlify δίνει **δωρεάν SSL** (https://) αυτόματα
-
-### Βήμα 5 — Ενεργοποίηση Identity + Git Gateway (για το /admin)
-
-1. Στο Netlify, πάτα **«Site configuration → Identity»**
-2. Πάτα **«Enable Identity»**
-3. Πάτα **«Registration preferences» → «Invite only»** (έτσι δεν μπορεί κάποιος τυχαίος να εγγραφεί)
-4. Στο ίδιο tab, βρες **«Services → Git Gateway»** και πάτα **«Enable Git Gateway»**
-
-### Βήμα 6 — Προσκάλεσε τον εαυτό σου / διαχειριστή
-
-1. Στο **«Identity → Invite users»**
-2. Δώσε το email του διαχειριστή
-3. Θα έρθει email πρόσκλησης
-4. Από το email, πάτα τον σύνδεσμο και βάλε password
-5. Έγινε — μπορείς πλέον να συνδεθείς στο **`kokalamarias.gr/admin`**
-
----
-
-## 🎛 Πώς δουλεύει το CMS
-
-### Login
-
-1. Πήγαινε στο **`kokalamarias.gr/admin`**
-2. Email + Password
-3. Είσαι μέσα
-
-### Δημοσίευση Νέου Άρθρου
-
-1. Στο αριστερό μενού πάτα **«📰 Νέα & Ανακοινώσεις»**
-2. Πάτα **«Νew Entry»** / «Νέο»
-3. Συμπλήρωσε:
-   - **Τίτλος** — π.χ. «Νέο μετάλλιο στους Μεσογειακούς»
-   - **Ημερομηνία** — επιλογή από ημερολόγιο
-   - **Κατηγορία** — από dropdown (Πρωτάθλημα, Παγκόσμιο κλπ)
-   - **Φωτογραφία** — drag & drop ή upload από υπολογιστή
-   - **Σύντομη περίληψη** — 2-3 γραμμές
-   - **Πλήρες κείμενο** (προαιρετικό) — markdown για bold/lists
-   - **Featured** — checked για μεγάλη κάρτα με φωτό
-4. Πάτα **«Save»** → **«Publish now»**
-5. Σε ~30 δευτερόλεπτα το άρθρο εμφανίζεται στο `kokalamarias.gr/news.html`
-
-### Επεξεργασία Αθλητών / Δ.Σ. / Τμημάτων
-
-Από το αριστερό μενού:
-- **🏊 Αθλητές / Πρωταθλητές** — προσθήκη/επεξεργασία διακρίσεων
-- **🏛 Διοικητικό Συμβούλιο** — όνομα/ρόλος μελών
-- **🏊‍♂️ Τμήματα** — περιγραφές, ηλικίες, πρόγραμμα
-- **📝 Κείμενα Σελίδων** — Hero, About, Contact, social media URLs
-
-Όλα έχουν φιλικά πεδία (όχι κώδικας).
-
-### Markdown — Γρήγορος Οδηγός
-
-Σε πεδία «Πλήρες κείμενο»:
-
-| Σύνταξη | Αποτέλεσμα |
+| Αρχείο | Ρόλος |
 |---|---|
-| `**έντονα**` | **έντονα** |
-| `*πλάγια*` | *πλάγια* |
-| `- στοιχείο 1` (νέα γραμμή) `- στοιχείο 2` | Λίστα κουκίδων |
-| `[κείμενο](https://...)` | Σύνδεσμος |
+| `_redirects` | URL rewrites: `/news/:slug → /article`, `/social/:slug → /article`, `/champions/:slug → /athlete`, `/teams/:slug → /team` (όλα status 200) |
+| `_headers` | Cache-Control: εικόνες 1 έτος immutable, **JSON `must-revalidate`** (κρίσιμο — αλλιώς οι CMS αλλαγές δεν φαίνονται), security headers |
+| `404.html` | Branded 404 (το Cloudflare το σερβίρει αυτόματα με status 404) |
+| `functions/sitemap.xml.js` | **Δυναμικό sitemap** — Pages Function που διαβάζει τα JSON on-request. Δεν χρειάζεται ποτέ χειροκίνητη ενημέρωση. ΜΗΝ προσθέσεις στατικό `sitemap.xml` (θα υπερισχύσει της function). |
 
 ---
 
-## 🆘 Συχνές Ερωτήσεις
+## 🔐 Decap CMS (/admin)
 
-**Q: Άλλαξα κάτι στο CMS αλλά δεν φαίνεται στο site;**
-A: Περίμενε ~30-60 δευτερόλεπτα. Το Netlify ξανα-deploy-άρει αυτόματα. Hard refresh (Cmd+Shift+R / Ctrl+F5) στον browser.
+- **UI**: `admin/index.html` (φορτώνει decap-cms από unpkg)
+- **Config**: `admin/config.yml` — backend `github`, repo `KOKalamarias/kokalamarias-website`
+- **OAuth**: Cloudflare Worker `decap-proxy` (URL: `decap-proxy.empty-cloud-336b.workers.dev`)
+  - Secrets στο Worker: `OAUTH_CLIENT_ID`, `OAUTH_CLIENT_SECRET`
+  - Αντιστοιχούν σε GitHub OAuth App (Settings → Developer settings του λογαριασμού KOKalamarias), callback: `https://decap-proxy.empty-cloud-336b.workers.dev/callback`
+- Κάθε "Publish" στο CMS = git commit στο main = auto-deploy
 
-**Q: Πώς προσθέτω νέο μέλος Δ.Σ.;**
-A: Admin → Διοικητικό Συμβούλιο → Πάτα στο μέλος που έχει άδειο όνομα → Συμπλήρωσε → Save.
+### Collections (τι επεξεργάζεται ο χρήστης)
 
-**Q: Πώς αλλάζω εικόνες (logo, hero, κλπ);**
-A: Admin → Media → ανέβασε νέα. Ή απευθείας από το αντίστοιχο πεδίο όπου την χρησιμοποιείς.
-
-**Q: Πώς προσκαλώ έναν δεύτερο διαχειριστή;**
-A: Netlify dashboard → Identity → Invite users → δώσε το email του. Θα του έρθει πρόσκληση.
-
-**Q: Τι κάνω αν χαθούν τα data;**
-A: Όλα είναι στο GitHub — έχεις πλήρες ιστορικό. Αν διαγράψεις άρθρο κατά λάθος, μπορεί να ανακτηθεί από το git history.
+`content/data/` → `news.json`, `social.json`, `athletes.json`, `teams.json`, `board.json`, `site.json`
+Media uploads → `images/uploads/`
 
 ---
 
-## 💰 Κόστος
+## 🧩 Frontend αρχιτεκτονική
 
-- **GitHub**: Δωρεάν
-- **Netlify**: Δωρεάν για το tier που χρειαζόμαστε (100GB bandwidth/μήνα — αρκετό για μικρομεσαίο site)
-- **Domain `kokalamarias.gr`**: ~€15/χρόνο από πάροχο (Papaki, GoDaddy κλπ)
+- **Στατικό multi-page** HTML/CSS/JS — κανένα framework, κανένα build
+- **i18n**: `translations.js` (EL/EN) + `data-i18n` attributes· εναλλαγή client-side (κουμπί EL/EN), αποθήκευση σε localStorage
+- **Loaders** (φορτώνουν JSON → render): `news-loader`, `social-news-loader`, `athletes-loader`, `board-loader`, `teams-loader`, `site-loader`, + ατομικές σελίδες: `article-loader`, `athlete-loader`, `team-page-loader`
+- **Slug pages**: `/news/[slug]` κ.λπ. — το `_redirects` σερβίρει το template, ο loader διαβάζει το slug από το URL και κάνει render + ενημέρωση meta/canonical
+- **Φόρμα επικοινωνίας**: Web3Forms API (POST από script.js) → email στο info@
+- **Video**: πεδίο `video` σε άρθρα → YouTube/Vimeo embed (article-loader)
+- **Εικόνες**: WebP παντού· hero eager + fetchpriority, τα υπόλοιπα lazy
 
-**Σύνολο: ~€15/χρόνο.**
+⚠️ **ΜΗΝ αλλάξεις** τα `fetch(..., { cache: "no-cache" })` των loaders σε `force-cache` — σε συνδυασμό με το `_headers` (must-revalidate) εξασφαλίζουν ότι οι CMS αλλαγές εμφανίζονται αμέσως.
 
 ---
 
-## 📞 Υποστήριξη
+## 🔁 Συνηθισμένες εργασίες
 
-Για τεχνική βοήθεια εγκατάστασης, μίλα με τον developer που σου έστησε το site. Μετά την αρχική εγκατάσταση, η συντήρηση γίνεται 100% από το `/admin` πάνελ χωρίς τεχνικές γνώσεις.
+### Deploy αλλαγής κώδικα
+1. Επεξεργασία στο working folder (`kok-website-v2`) → αντιγραφή στο clone (`kokalamarias-website`)
+2. GitHub Desktop → Commit → Push origin
+3. ~1 λεπτό → live. Έλεγχος: `https://www.kokalamarias.gr`
+
+### Αν το CMS δεν κάνει login
+1. Έλεγχος Worker: `curl https://decap-proxy.empty-cloud-336b.workers.dev/` → «Decap CMS OAuth proxy — ready.»
+2. Έλεγχος GitHub OAuth App callback URL
+3. Έλεγχος secrets στο Worker (Cloudflare → Workers → decap-proxy → Settings → Variables)
+
+### Αν πέσει το email
+1. `dig MX kokalamarias.gr` → πρέπει 3 records Zoho EU
+2. Έλεγχος Free DNS στο pointer.gr (τα records του πίνακα παραπάνω)
+3. Zoho Admin: mailadmin.zoho.eu
+
+### Rollback κακού deploy
+- GitHub Desktop → History → δεξί κλικ στο κακό commit → Revert → Push
+- Ή: Cloudflare Pages → Deployments → προηγούμενο deployment → Rollback
+
+---
+
+## 📦 Δομή repo (κύρια αρχεία)
+
+```
+├── *.html                  # σελίδες (index, club, teams, champions, social, news, contact)
+├── article.html / athlete.html / team.html   # templates για slug pages
+├── 404.html
+├── style.css
+├── translations.js         # EL/EN λεξικό
+├── partials.js             # navbar + footer (κοινά)
+├── script.js               # menu, γλώσσα, φόρμα επικοινωνίας
+├── *-loader.js             # δυναμικό rendering από JSON
+├── content/data/*.json     # ΤΟ ΠΕΡΙΕΧΟΜΕΝΟ (επεξεργάζεται το CMS)
+├── admin/                  # Decap CMS
+├── functions/sitemap.xml.js
+├── _redirects, _headers, robots.txt
+├── images/                 # γραφικά (WebP) + uploads/ (CMS) + coaches/
+├── MANUAL.md               # οδηγός μη-τεχνικού χρήστη
+└── DEPLOYMENT.md           # αυτό το αρχείο
+```
