@@ -82,7 +82,8 @@
     const dateLabel = langWrap(dateR.text, dateR.untranslated);
     const summary = langWrap(md(summaryR.text), summaryR.untranslated, "div");
     const body = langWrap(md(bodyR.text), bodyR.untranslated, "div");
-    const isFeatured = article.featured && article.image;
+    const hasPhoto = !!(article.image && String(article.image).trim());
+    const isFeatured = !!article.featured;
     const slug = article.slug || "";
     const articleURL = slug ? `/social/${slug}` : null;
     const readMoreLabel = lang === "en" ? "Read more" : "Διαβάστε περισσότερα";
@@ -90,35 +91,32 @@
       ? `<a href="${articleURL}" class="news-link">${readMoreLabel} <i class="fas fa-arrow-right"></i></a>`
       : "";
 
-    if (isFeatured) {
-      const photoBlock = articleURL
-        ? `<a href="${articleURL}" class="news-photo"><img src="${article.image}" alt="${title}" loading="lazy" /></a>`
-        : `<div class="news-photo"><img src="${article.image}" alt="${title}" loading="lazy" /></div>`;
-      const titleBlock = articleURL
-        ? `<h3><a href="${articleURL}">${title}</a></h3>`
-        : `<h3>${title}</h3>`;
-      return `<article class="news-card featured-news has-photo">
-        ${photoBlock}
-        <div class="news-body">
-          <div class="news-category">${cat} ${videoBadge}</div>
-          <div class="news-date"><i class="fas fa-calendar"></i> ${dateLabel}</div>
-          ${titleBlock}
-          ${summary}
-          ${body ? `<div class="news-body-extra">${body}</div>` : ""}
-          ${readMoreLink}
-        </div>
-      </article>`;
-    }
-
     const titleBlock = articleURL
       ? `<h3><a href="${articleURL}">${title}</a></h3>`
       : `<h3>${title}</h3>`;
-    return `<article class="news-card">
-      <div class="news-category">${cat} ${videoBadge}</div>
-      <div class="news-date"><i class="fas fa-calendar"></i> ${dateLabel}</div>
-      ${titleBlock}
-      ${summary}
-      ${readMoreLink}
+
+    // Η φωτογραφία εμφανίζεται ΠΑΝΤΑ όταν υπάρχει.
+    // Το "featured" ελέγχει μόνο το μέγεθος/διάταξη της κάρτας.
+    const photoBlock = hasPhoto
+      ? (articleURL
+          ? `<a href="${articleURL}" class="news-photo"><img src="${article.image}" alt="${titleR.text}" loading="lazy" /></a>`
+          : `<div class="news-photo"><img src="${article.image}" alt="${titleR.text}" loading="lazy" /></div>`)
+      : "";
+
+    const classes = ["news-card"];
+    if (isFeatured) classes.push("featured-news");
+    if (hasPhoto) classes.push("has-photo");
+
+    return `<article class="${classes.join(" ")}">
+      ${photoBlock}
+      <div class="news-body">
+        <div class="news-category">${cat} ${videoBadge}</div>
+        <div class="news-date"><i class="fas fa-calendar"></i> ${dateLabel}</div>
+        ${titleBlock}
+        ${summary}
+        ${(isFeatured && body) ? `<div class="news-body-extra">${body}</div>` : ""}
+        ${readMoreLink}
+      </div>
     </article>`;
   }
 
