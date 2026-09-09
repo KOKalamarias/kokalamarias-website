@@ -102,13 +102,24 @@
     const ctaLabel = lang === "en" ? "Register / Contact us" : "Εγγραφή / Επικοινωνία";
     const faqsHTML = renderFAQs(team, lang);
 
+    // Το block του προπονητή εμφανίζεται αν υπάρχει κείμενο Ή φωτογραφία
+    // (ώστε να μη «χάνεται» ό,τι έχει συμπληρώσει ο χρήστης στο CMS).
+    const coachPhoto = team.coach_photo && String(team.coach_photo).trim();
+    const coachBlock = (coachIntro || coachPhoto)
+      ? `<div class="team-coach-intro">${
+          coachPhoto
+            ? `<img class="team-coach-photo" src="${coachPhoto}" alt="${escape((coachIntro || name).split("—")[0].trim())}" loading="lazy" />`
+            : `<i class="fas fa-user-tie team-coach-icon"></i>`
+        }${coachIntro ? `<span>${escape(coachIntro)}</span>` : ""}</div>`
+      : "";
+
     container.innerHTML = `
       <article class="team-page">
         <span class="page-hero-tag">${age}</span>
         <h1>${name}</h1>
         ${desc ? `<p class="team-desc">${desc}</p>` : ""}
         ${sched ? `<div class="team-schedule"><i class="fas fa-clock"></i> ${sched}</div>` : ""}
-        ${coachIntro ? `<div class="team-coach-intro">${team.coach_photo ? `<img class="team-coach-photo" src="${team.coach_photo}" alt="${escape(coachIntro.split('—')[0].trim())}" loading="lazy" />` : `<i class="fas fa-user-tie team-coach-icon"></i>`}<span>${escape(coachIntro)}</span></div>` : ""}
+        ${coachBlock}
         ${faqsHTML}
         <div class="article-footer">
           <a href="/contact" class="btn btn-primary"><i class="fas fa-envelope"></i> ${ctaLabel}</a>

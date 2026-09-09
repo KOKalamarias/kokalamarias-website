@@ -60,13 +60,13 @@ collections:
                   - { label: "Εγγραφές", value: "registration" }
                   - { label: "Εκδήλωση", value: "event" }
                   - { label: "Κοινωνικό", value: "social" }
-              - { label: "Κύρια φωτογραφία (προαιρετικό)", name: "image", widget: "image", required: false }
+              - { label: "Κύρια φωτογραφία (προαιρετικό)", name: "image", widget: "image", required: false, hint: "Αν την ανεβάσετε, εμφανίζεται πάντα στην κάρτα και στη σελίδα του άρθρου. Ιδανικά οριζόντια 16:9 (π.χ. 1600x900), έως 500 KB." }
               - { label: "Video URL (προαιρετικό)", name: "video", widget: "string", required: false, hint: "Επικόλληση URL από YouTube ή Vimeo. Π.χ. https://www.youtube.com/watch?v=abc123 ή https://vimeo.com/123456" }
               - { label: "Σύντομη περίληψη", name: "summary", widget: "text" }
               - { label: "Σύντομη περίληψη (Αγγλικά)", name: "summary_en", widget: "text", required: false }
               - { label: "Πλήρες κείμενο (markdown)", name: "body", widget: "text", required: false }
               - { label: "Πλήρες κείμενο (Αγγλικά)", name: "body_en", widget: "text", required: false }
-              - { label: "Featured (μεγάλη κάρτα με φωτό)", name: "featured", widget: "boolean", default: false }
+              - { label: "Προβολή σε μεγάλη κάρτα", name: "featured", widget: "boolean", default: false, hint: "Η κάρτα πιάνει όλο το πλάτος και ξεχωρίζει. Η φωτογραφία εμφανίζεται ούτως ή άλλως — αυτό αλλάζει μόνο το μέγεθος. Κρατήστε 1-2 άρθρα το πολύ." }
               - { label: "Δημοσιευμένο", name: "published", widget: "boolean", default: true }
 
   # ====================================================
@@ -100,13 +100,13 @@ collections:
                   - { label: "Παραλιακές Δράσεις", value: "beach" }
                   - { label: "Οικογένεια Κ.Ο.Κ.", value: "family" }
                   - { label: "Άλλο", value: "other" }
-              - { label: "Κύρια φωτογραφία (προαιρετικό)", name: "image", widget: "image", required: false }
+              - { label: "Κύρια φωτογραφία (προαιρετικό)", name: "image", widget: "image", required: false, hint: "Αν την ανεβάσετε, εμφανίζεται πάντα στην κάρτα και στη σελίδα του άρθρου. Ιδανικά οριζόντια 16:9 (π.χ. 1600x900), έως 500 KB." }
               - { label: "Video URL (προαιρετικό)", name: "video", widget: "string", required: false, hint: "Επικόλληση URL από YouTube ή Vimeo. Π.χ. https://www.youtube.com/watch?v=abc123 ή https://vimeo.com/123456" }
               - { label: "Σύντομη περίληψη", name: "summary", widget: "text" }
               - { label: "Σύντομη περίληψη (Αγγλικά)", name: "summary_en", widget: "text", required: false }
               - { label: "Πλήρες κείμενο (markdown)", name: "body", widget: "text", required: false }
               - { label: "Πλήρες κείμενο (Αγγλικά)", name: "body_en", widget: "text", required: false }
-              - { label: "Featured (μεγάλη κάρτα με φωτό)", name: "featured", widget: "boolean", default: false }
+              - { label: "Προβολή σε μεγάλη κάρτα", name: "featured", widget: "boolean", default: false, hint: "Η κάρτα πιάνει όλο το πλάτος και ξεχωρίζει. Η φωτογραφία εμφανίζεται ούτως ή άλλως — αυτό αλλάζει μόνο το μέγεθος. Κρατήστε 1-2 άρθρα το πολύ." }
               - { label: "Δημοσιευμένο", name: "published", widget: "boolean", default: true }
 
   # ====================================================
